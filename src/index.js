@@ -1,3 +1,4 @@
+import { jsx, css, Global } from '@emotion/react/macro';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
+
   <React.StrictMode>
     <ComingSoonComponent />
   </React.StrictMode>,
