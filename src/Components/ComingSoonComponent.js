@@ -26,8 +26,8 @@ const title = css`
     background-color: rgba(255, 255, 255, 0);
     color: rgba(112, 112, 112, 1);
     text-align: center;
-    font: 5vw 'Arizonia', Helvetica, sans-serif;
-    font-weight: 700;
+    font: 4vw 'Spartan', sans-serif;
+    
     
 `
 
@@ -36,9 +36,9 @@ const subTitle = css`
     display: block;
     color: rgba(255, 255, 255, 1);
     font-size: 2vw;
-    font-weight: 700;
+    font-weight: bold;
     font-style: italic;
-    font-family: Great Vibes;
+    font-family: 'Playfair Display', serif;
     text-align: center;
     
 `
@@ -65,6 +65,23 @@ const hr = css`
 const contentColumn = css`
     grid-column: 2 / span 3;
     grid-row: 2;
+`
+
+const speechBallon = css`
+    opacity: 1;
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 860.46;
+    height: 441;
+    left: 472;
+    top: 449;
 `
 
 class ComingSoonComponent extends Component{
@@ -100,7 +117,9 @@ class ComingSoonComponent extends Component{
           <div css={ contentColumn }>
             <section>
               <article>
-                <p>ssssssssssssssssssss</p>
+                <svg data-layer="eac5da70-bcd6-47f2-a210-015b9d4d689d" css={ speechBallon } preserveAspectRatio="none" viewBox="-0.75 -0.75 861.956787109375 442.5" fill="rgba(255, 255, 255, 1)">
+                  <path d="M 81 441 C 36.26460266113281 441 0 404.7354125976563 0 360 L 0 81 C 0 36.26460266113281 36.26460266113281 0 81 0 L 603.9999389648438 0 C 648.7352905273438 0 684.9999389648438 36.26460266113281 684.9999389648438 81 L 684.9999389648438 235.1881866455078 L 809.0946044921875 340.5411071777344 L 860.4567260742188 381.5955200195313 L 684.9999389648438 346.1705627441406 L 684.9999389648438 360 C 684.9999389648438 404.7354125976563 648.7352905273438 441 603.9999389648438 441 L 81 441 Z"  />
+                </svg>
               </article>
             </section>
           </div>
