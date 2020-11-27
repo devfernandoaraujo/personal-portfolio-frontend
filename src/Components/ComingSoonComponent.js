@@ -1,7 +1,8 @@
 import { jsx, css, Global } from '@emotion/react/macro';
-import styled from '@emotion/styled/macro'
+import styled from '@emotion/styled/macro';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
+import beardImage from '../Assets/Images/beard.png';
 
 
 
@@ -67,9 +68,28 @@ const contentColumn = css`
     grid-row: 2;
 `
 
+const SpeechBallonGrid = styled('div')({
+        filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#fc0303",GradientType=1)',
+        display: "grid",
+        gridTemplateColumns:'repeat(5, 12vw)',
+        gridTemplateRows: 'repeat(1, auto)'
+        
+})
+
+const speechBallonColumnLeft = css`
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    align-self: center;
+`
+const beardImageColumnRight = css`
+    grid-column: 4 / span 2;
+    grid-row: 1;
+    align-self: center;
+`
+
+
 const speechBallon = css`
     opacity: 1;
-    position: absolute;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -78,10 +98,34 @@ const speechBallon = css`
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    width: 860.46;
-    height: 441;
-    left: 472;
-    top: 449;
+    width: 100%;
+    height: 40%;
+`
+const beardImageRight = css`
+    width : 90%;
+    height: 80%;
+    
+`
+
+const svgMainText = css`
+    width:70%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size:1.5vw;
+    fill:black;
+`
+const svgSmallText = css`
+    width:70%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size:1.0vw;
+    fill:black;
+`
+const A = styled.a`
+  fill:blue;
+  &:active{
+    fill:red;
+  }
 `
 
 class ComingSoonComponent extends Component{
@@ -117,9 +161,25 @@ class ComingSoonComponent extends Component{
           <div css={ contentColumn }>
             <section>
               <article>
-                <svg data-layer="eac5da70-bcd6-47f2-a210-015b9d4d689d" css={ speechBallon } preserveAspectRatio="none" viewBox="-0.75 -0.75 861.956787109375 442.5" fill="rgba(255, 255, 255, 1)">
-                  <path d="M 81 441 C 36.26460266113281 441 0 404.7354125976563 0 360 L 0 81 C 0 36.26460266113281 36.26460266113281 0 81 0 L 603.9999389648438 0 C 648.7352905273438 0 684.9999389648438 36.26460266113281 684.9999389648438 81 L 684.9999389648438 235.1881866455078 L 809.0946044921875 340.5411071777344 L 860.4567260742188 381.5955200195313 L 684.9999389648438 346.1705627441406 L 684.9999389648438 360 C 684.9999389648438 404.7354125976563 648.7352905273438 441 603.9999389648438 441 L 81 441 Z"  />
-                </svg>
+                <SpeechBallonGrid>
+                  <div css={ speechBallonColumnLeft }>
+                    <svg data-layer="eac5da70-bcd6-47f2-a210-015b9d4d689d" css={ speechBallon } preserveAspectRatio="none" viewBox="-0.75 -0.75 861.956787109375 442.5" fill="rgba(255, 255, 255, 1)">
+                      <path d="M 81 441 C 36.26460266113281 441 0 404.7354125976563 0 360 L 0 81 C 0 36.26460266113281 36.26460266113281 0 81 0 L 603.9999389648438 0 C 648.7352905273438 0 684.9999389648438 36.26460266113281 684.9999389648438 81 L 684.9999389648438 235.1881866455078 L 809.0946044921875 340.5411071777344 L 860.4567260742188 381.5955200195313 L 684.9999389648438 346.1705627441406 L 684.9999389648438 360 C 684.9999389648438 404.7354125976563 648.7352905273438 441 603.9999389648438 441 L 81 441 Z"  />
+                      
+                      <text css={ svgMainText } x="40%" text-anchor="middle" y="10%" stroke="#000000" >A full blown portfolio site is coming</text>
+                      <text css={ svgMainText } dy="19%"  x="40%" text-anchor="middle" stroke="#000000">very soon! I've just been busy, give a</text>
+                      <text css={ svgMainText } dy="28%"  x="40%" text-anchor="middle" stroke="#000000">beard a break!</text>
+                      <text css={ svgSmallText } dy="50%"  x="15%" text-anchor="start" stroke="#000000">If you waana keep up with me or wanna say hi, check out the</text>
+                      <text css={ svgSmallText } dy="57%"  x="15%" text-anchor="start" stroke="#000000">links below or get in touch on <A stroke="blue" href="mailto:fernandomatosaraujo@gmail.com">fernandomatosaraujo@gmail.com</A></text>
+                    </svg>
+                  </div>
+                  <div css={ beardImageColumnRight }>
+                    <image>
+                      <img css={ beardImageRight } src={ beardImage } alt="Beard Image" />
+                    </image>
+                  </div>
+                </SpeechBallonGrid>
+                
               </article>
             </section>
           </div>

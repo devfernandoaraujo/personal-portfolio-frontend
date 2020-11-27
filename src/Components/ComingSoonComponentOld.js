@@ -68,11 +68,11 @@ export default class ComingSoonComponentOld extends Component {
     
     return (
     <ScrollView data-layer="6b6f37ba-5f79-4f05-bf00-fbc1a06c2515" style={styles.comingSoon}>
-        <ReactImage data-layer="de6f6194-2e95-4f53-834d-e2167cb0e719" source={require('./assets/rectangle1.png')} style={styles.comingSoon_rectangle1} />
+        <ReactImage data-layer="de6f6194-2e95-4f53-834d-e2167cb0e719" source={require('./Assets/Images/rectangle1.png')} style={styles.comingSoon_rectangle1} />
         <Text data-layer="06ef3e2c-b2b0-40f5-b0c8-3b9a13fd02d1" style={styles.comingSoon_fernandoMAraujo}>Fernando M Araujo</Text>
-        <ReactImage data-layer="1423c544-a702-496b-bf85-d6b3d1c7abcc" source={require('./assets/beard.png')} style={styles.comingSoon_beard} />
+        <ReactImage data-layer="1423c544-a702-496b-bf85-d6b3d1c7abcc" source={require('./Assets/Images/beard.png')} style={styles.comingSoon_beard} />
         <View style={styles.comingSoon_canadaBasedWebDeveloper}><Text data-layer="d89e35b3-acfe-4f46-a997-2468a24661e7" style={{"marginTop":-7,"color":"rgba(255, 255, 255, 1)","fontSize":71,"fontWeight":"700","fontStyle":"normal","fontFamily":"Arial Rounded MT","textAlign":"center","lineHeight":78.10000000000001}}>Canada based Web Developer</Text></View>
-        <ReactImage data-layer="34626de2-099a-4026-b7ca-8a50b03fbc99" source={require('./assets/rectangle2.png')} style={styles.comingSoon_rectangle2} />
+        <ReactImage data-layer="34626de2-099a-4026-b7ca-8a50b03fbc99" source={require('./Assets/Images/rectangle2.png')} style={styles.comingSoon_rectangle2} />
         <Svg data-layer="eac5da70-bcd6-47f2-a210-015b9d4d689d" style={styles.comingSoon_union1} preserveAspectRatio="none" viewBox="-0.75 -0.75 861.956787109375 442.5" fill="rgba(255, 255, 255, 1)"><SvgPath d="M 81 441 C 36.26460266113281 441 0 404.7354125976563 0 360 L 0 81 C 0 36.26460266113281 36.26460266113281 0 81 0 L 603.9999389648438 0 C 648.7352905273438 0 684.9999389648438 36.26460266113281 684.9999389648438 81 L 684.9999389648438 235.1881866455078 L 809.0946044921875 340.5411071777344 L 860.4567260742188 381.5955200195313 L 684.9999389648438 346.1705627441406 L 684.9999389648438 360 C 684.9999389648438 404.7354125976563 648.7352905273438 441 603.9999389648438 441 L 81 441 Z"  /></Svg>
         <Text data-layer="bf129e10-79ae-47e5-b871-0cff351f7ab0" style={styles.comingSoon_aFullBlownPortfolioSiteIsComingVerySoonIveJustBeenBusyGiveABeardABreak}>A full blown portfolio site is coming 
 very soon! I've just been busy, give a beard a break!</Text>
