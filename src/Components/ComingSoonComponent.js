@@ -3,6 +3,10 @@ import styled from '@emotion/styled/macro';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import beardImage from '../Assets/Images/beard.png';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 
@@ -126,6 +130,20 @@ const A = styled.a`
   &:active{
     fill:red;
   }
+  &:after{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`
+const fontAwesomeLinkEdin = css`
+  color: #2867B2;
+`
+
+const fontAwesomeGitHub = css`
+  color: #333333;
 `
 
 class ComingSoonComponent extends Component{
@@ -171,6 +189,13 @@ class ComingSoonComponent extends Component{
                       <text css={ svgMainText } dy="28%"  x="40%" text-anchor="middle" stroke="#000000">beard a break!</text>
                       <text css={ svgSmallText } dy="50%"  x="15%" text-anchor="start" stroke="#000000">If you waana keep up with me or wanna say hi, check out the</text>
                       <text css={ svgSmallText } dy="57%"  x="15%" text-anchor="start" stroke="#000000">links below or get in touch on <A stroke="blue" href="mailto:fernandomatosaraujo@gmail.com">fernandomatosaraujo@gmail.com</A></text>
+                      
+                      <A href="http://www.linkedin.com/in/fernando-maraujo/">
+                        <FontAwesomeIcon preserveAspectRatio="xMidYMin slice" x="30%"   y="70%" viewBox="0 0 100 100" width="2%"  height="2%"  css={fontAwesomeLinkEdin} icon={ faLinkedin } fixedWidth />
+                      </A>
+                      <A href="https://github.com/devfernandoaraujo">
+                        <FontAwesomeIcon preserveAspectRatio="xMidYMin slice" x="45%"   y="70%" viewBox="0 0 100 100" width="2%"  height="2%"  css={fontAwesomeGitHub} icon={ faGithub } fixedWidth />
+                      </A>
                     </svg>
                   </div>
                   <div css={ beardImageColumnRight }>
