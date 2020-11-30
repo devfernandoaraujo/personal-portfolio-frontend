@@ -200,7 +200,7 @@ class ComingSoonComponent extends Component{
                   </div>
                   <div css={ beardImageColumnRight }>
                     <image>
-                      <img css={ beardImageRight } src={ beardImage } alt="Beard Image" />
+                      <img css={ beardImageRight } src={ beardImage } alt="Fernando Image" />
                     </image>
                   </div>
                 </SpeechBallonGrid>
