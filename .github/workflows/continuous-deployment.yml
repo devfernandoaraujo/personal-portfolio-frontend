@@ -15,7 +15,7 @@ steps:
   #  env:
   #    AWS_S3_BUCKET: ${{ secrets.STAGING_AWS_S3_BUCKET }}
 
-  # Deploy on FTP
+ 
 - name: FTP Deploy
   if: github.ref == 'refs/heads/master'
   uses: SamKirkland/FTP-Deploy-Action@3.0.0
