@@ -1,0 +1,40 @@
+steps:
+  - uses: actions/checkout@v1
+
+  - name: Install dependencies
+    run: yarn
+
+  - name: Build
+    run: yarn build
+
+  #- name: Deploy staging
+  #  if: github.ref == 'refs/heads/develop'
+  #  uses: jakejarvis/s3-sync-action@v0.5.0
+  #  with:
+  #    args: --acl public-read --follow-symlinks --delete
+  #  env:
+  #    AWS_S3_BUCKET: ${{ secrets.STAGING_AWS_S3_BUCKET }}
+
+#Deploy on FTP
+- name: FTP Deploy
+  if: github.ref == 'refs/heads/master'
+  uses: SamKirkland/FTP-Deploy-Action@3.0.0
+  with:
+    # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+    ftp-server: ${{ secrets.FTP_HOST }}
+    # FTP account username
+    ftp-username: ${{ secrets.FTP_USERNAME }}
+    # FTP account password
+    ftp-password: ${{ secrets.FTP_PASSWORD }}
+    # The local folder to copy, defaults to root project folder
+    local-dir: build
+    #FTP Port used
+    port: ${{ secrets.FTP_PORT }}
+    # Passes through options into git-ftp
+    git-ftp-args: --insecure
+    #Exclude some files
+    exclude: .git*
+          - .git*/**
+          -  **/.git*/**
+          - node_modules/**
+          - node_modules/**/*
