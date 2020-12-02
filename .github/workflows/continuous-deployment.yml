@@ -19,8 +19,17 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    - name: Install dependencies
+    - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build # will run `yarn build` command
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: test # will run `yarn test` command
+    
+    - name: Install Dependencies
         run: yarn install
 
     - name: Build
@@ -37,7 +46,7 @@ jobs:
           # FTP account password
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           # The local folder to copy, defaults to root project folder
-          local-dir: # optional
+          local-dir: build # optional
           # Passes through options into git-ftp
           git-ftp-args: --insecure
           #Exclude some files
