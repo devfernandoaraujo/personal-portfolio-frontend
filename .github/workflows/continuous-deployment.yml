@@ -19,7 +19,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: npm install -g yarn # Extra Step
+      - run: npm install yarn # Extra Step
       - name: 🔨 Build Project
         run: |
           yarn install
