@@ -40,4 +40,5 @@ jobs:
           # The local folder to copy, defaults to root project folder
           localDir: # optional
           # Passes through options into git-ftp
-          remoteDir: "public_html"
+          remoteDir: ${{ secrets.FTP_REMOTE_DIR }}
+          forceSsl: true
