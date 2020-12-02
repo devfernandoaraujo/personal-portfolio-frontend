@@ -32,7 +32,7 @@ jobs:
       - name: 🔨 Build Project
         run: |
           yarn install
-          yarn run build
+          yarn build
 
       #Deploy on FTP
       - name: FTP Deploy
