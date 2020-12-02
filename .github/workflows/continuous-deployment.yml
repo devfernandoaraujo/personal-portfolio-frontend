@@ -4,9 +4,9 @@ name: Continuous Integration
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,26 +17,25 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    - uses: borales/actions-yarn@v2.0.0
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: build # will run `yarn build` command
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: test # will run `yarn test` command
-    
-    - name: Install Dependencies
-        run: yarn install
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build # will run `yarn build` command
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: test # will run `yarn test` command
 
-    - name: Build
-        run: yarn build
+      - name: 🔨 Build Project
+        run: |
+          yarn install
+          yarn run build
 
-    #Deploy on FTP
-    - name: FTP Deploy
+      #Deploy on FTP
+      - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
           # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
@@ -51,7 +50,7 @@ jobs:
           git-ftp-args: --insecure
           #Exclude some files
           exclude: .git*
-              .git*/**
-              **/.git*/**
-              node_modules/**
-              node_modules/**/*
+            .git*/**
+            **/.git*/**
+            node_modules/**
+            node_modules/**/*
