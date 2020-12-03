@@ -46,7 +46,6 @@ jobs:
           local-dir: ./build/
           port: ${{ secrets.FTP_PORT }}
           log-level: standard
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
           exclude: .git*
             .git*/**
             node_modules/**
