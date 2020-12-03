@@ -1,7 +1,8 @@
 name: Continuous Integration
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# events but only for the master branchyarn add -A
+
 on:
   push:
     branches: [master]
@@ -27,13 +28,22 @@ jobs:
           yarn install
           yarn build
 
+      #List files on server
+      - name: List output files
+        run: ls
+
       #Deploy on FTP
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-          server: ${{ secrets.FTP_SERVER }}
+          ftp-server: ${{ secrets.FTP_SERVER }}
           # FTP account username
-          username: ${{ secrets.FTP_USERNAME }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
           # FTP account password
-          password: ${{ secrets.FTP_PASSWORD }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          #Static folder where the application is located
+          #local-dir: build
+          protocol: ftp
+          port: ${{ secrets.FTP_PORT }}
+          git-ftp-args: --insecure
