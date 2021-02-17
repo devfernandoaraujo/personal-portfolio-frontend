@@ -5,7 +5,6 @@ import './index.css';
 import ComingSoonComponent from './Components/ComingSoonComponent';
 import reportWebVitals from './reportWebVitals';
 
-
 ReactDOM.render(
 
   <React.StrictMode>
