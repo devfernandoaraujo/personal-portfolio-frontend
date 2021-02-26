@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import ComingSoonComponent from './Components/ComingSoonComponent';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-
   <React.StrictMode>
-    <ComingSoonComponent />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
