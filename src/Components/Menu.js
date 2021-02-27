@@ -5,7 +5,7 @@ import MediaQuery from 'react-responsive';
 import mq from '../Helper/MediaQuerie';
 
 
-const AppHeader = css`
+const navbar = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,9 +31,9 @@ class MenuComponent extends Component{
     render(){
         return (
             <header >
-                <nav css = { AppHeader }>
-                    <h1 class="logo"><a href="#">Brand</a></h1>
-                    <ul>
+                <nav css = { navbar }>
+                    <div class="logo"><a href="#">Brand</a></div>
+                    <ul >
                         <li>HOME</li>
                         <li>SERVICE</li>
                         <li>PORTFOLIO</li>
