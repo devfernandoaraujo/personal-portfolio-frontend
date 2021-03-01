@@ -4,24 +4,35 @@ import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
 import mq from '../Helper/MediaQuerie';
 
-
+const stickyInnerWrapper = css`
+    position: relative;
+    z-index: 9999;
+    transform: translate3d(0px, 0px, 0px);
+`
 const navbar = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-   background-color: #282c34;
   color: white;
+  width:100%;
+  -webkit-transform:translateY(0);
+  transform: translateY(0);
+  position: fixed;
+  z-index: 1001;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  padding: .5rem 1rem;
    ${mq[0]}{
       color:red
     }
+`
+const navList= css`
+    list-style-type: none;
 
-  ul{
-      list-style:none;
-      padding: 0;
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-  }
+    li{
+        display:inline-block;
+    }
 `
 
 
@@ -30,18 +41,22 @@ const navbar = css`
 class MenuComponent extends Component{
     render(){
         return (
-            <header >
-                <nav css = { navbar }>
-                    <div class="logo"><a href="#">Brand</a></div>
-                    <ul >
-                        <li>HOME</li>
-                        <li>SERVICE</li>
-                        <li>PORTFOLIO</li>
-                        <li>SKILLS</li>
-                        <li>TESTIMONIAL</li>
-                        <li>CONTACT</li>
-                    </ul>
-                </nav>
+            <header>
+               <div css={ stickyInnerWrapper  }>
+                    <nav css = { navbar }>
+                        <div>
+                            <a href="#">Brand</a>
+                        </div>
+                        <ul css ={ navList }>
+                            <li>HOME</li>
+                            <li>SERVICE</li>
+                            <li>PORTFOLIO</li>
+                            <li>SKILLS</li>
+                            <li>TESTIMONIAL</li>
+                            <li>CONTACT</li>
+                        </ul>
+                    </nav>
+               </div>
             </header>
             
         )

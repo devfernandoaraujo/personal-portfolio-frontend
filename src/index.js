@@ -30,7 +30,16 @@ injectGlobal`
     text-align: left;
     background-color: #fff;
   }
+
+  img, svg{
+    vertical-align: middle;
+  }
+
+  img{
+    border-style: none;
+  }
 `
+
 
 ReactDOM.render(
   
