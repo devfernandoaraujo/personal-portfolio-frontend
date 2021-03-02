@@ -11,7 +11,7 @@ const stickyInnerWrapper = css`
 `
 const navbar = css`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-space-between;
   align-items: center;
   color: white;
   width:100%;
@@ -23,8 +23,9 @@ const navbar = css`
   transition: all .3s ease-in-out;
   -webkit-backface-visibility: hidden;
   padding: .5rem 1rem;
-   ${mq[0]}{
-      color:red
+   ${mq[2]}{
+      flex-flow: row nowrap;
+      justify-content: flex-start;
     }
 `
 const navList= css`
