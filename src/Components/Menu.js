@@ -11,9 +11,10 @@ const stickyInnerWrapper = css`
 `
 const navbar = css`
   display: flex;
-  justify-content: space-space-between;
+  justify-content: space-between;
   align-items: center;
   color: white;
+  background: red;
   width:100%;
   -webkit-transform:translateY(0);
   transform: translateY(0);
@@ -33,6 +34,7 @@ const navList= css`
 
     li{
         display:inline-block;
+        padding: 56px 10px;
     }
 `
 
