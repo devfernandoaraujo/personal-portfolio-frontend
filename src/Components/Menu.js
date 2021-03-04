@@ -4,11 +4,7 @@ import React, { Component } from 'react';
 import MediaQuery from 'react-responsive';
 import mq from '../Helper/MediaQuerie';
 
-const stickyInnerWrapper = css`
-    position: relative;
-    z-index: 9999;
-    transform: translate3d(0px, 0px, 0px);
-`
+
 const navbar = css`
   display: flex;
   justify-content: space-between;
@@ -24,17 +20,51 @@ const navbar = css`
   transition: all .3s ease-in-out;
   -webkit-backface-visibility: hidden;
   padding: .5rem 1rem;
-   ${mq[2]}{
-      flex-flow: row nowrap;
-      justify-content: flex-start;
-    }
 `
 const navList= css`
     list-style-type: none;
 
     li{
         display:inline-block;
-        padding: 56px 10px;
+        padding: 10px 10px;
+        
+
+    }
+
+    li > a{
+        text-decoration: none;
+
+        color: #fff;
+    }
+
+    li> a:hover{
+        text-decoration-line: underline;
+        text-underline-offset: 0.5rem;
+    }
+`
+
+const navLink = css`
+    font: 600 14px/30px Montserrat, sams-serif;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    line-height: 30px;
+`
+
+const hamburgerMenu=css`
+    display: none;
+    ${mq[1]}{
+      display:block !important;
+    }
+    div{
+        width:25px;
+        height:3px;
+        background-color:#0DB3C7;
+        margin-bottom:3px;
     }
 `
 
@@ -45,21 +75,24 @@ class MenuComponent extends Component{
     render(){
         return (
             <header>
-               <div css={ stickyInnerWrapper  }>
-                    <nav css = { navbar }>
-                        <div>
-                            <a href="#">Brand</a>
-                        </div>
-                        <ul css ={ navList }>
-                            <li>HOME</li>
-                            <li>SERVICE</li>
-                            <li>PORTFOLIO</li>
-                            <li>SKILLS</li>
-                            <li>TESTIMONIAL</li>
-                            <li>CONTACT</li>
-                        </ul>
-                    </nav>
-               </div>
+                <nav css = { navbar }>
+                    <div className="auto-m">
+                        <a href="#">Brand</a>
+                    </div>
+                    <ul className="auto-m" css ={ navList }>
+                        <li css ={ navLink }><a href="#">HOME</a></li>
+                        <li css ={ navLink }><a href="#">SERVICE</a></li>
+                        <li css ={ navLink }><a href="#">PORTFOLIO</a></li>
+                        <li css ={ navLink }><a href="#">SKILLS</a></li>
+                        <li css ={ navLink }><a href="#">TESTIMONIAL</a></li>
+                        <li css ={ navLink }><a href="#">CONTACT</a></li>
+                    </ul>
+                    <div css={ hamburgerMenu }>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </nav>
             </header>
             
         )
