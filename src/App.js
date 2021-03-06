@@ -42,10 +42,6 @@ injectGlobal`
     border-style: none;
   }
 
-  .auto-m{
-    margin: auto !important;
-  }
-
   a{
     background-color: transparent;
     text-decoration: none;
@@ -54,6 +50,15 @@ injectGlobal`
 
   li{
     text-align: -webkit-match-parent;
+  }
+
+
+  .auto-m{
+    margin: auto !important;
+  }
+
+  .active{
+    display:block !important;
   }
 `
 

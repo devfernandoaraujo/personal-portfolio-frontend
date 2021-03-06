@@ -20,14 +20,30 @@ const navbar = css`
   transition: all .3s ease-in-out;
   -webkit-backface-visibility: hidden;
   padding: .5rem 1rem;
+
+  ${mq[1]}{
+      flex-direction: column;
+    }
 `
 const navList= css`
     list-style-type: none;
 
+    ${mq[1]}{
+      width: 100%;
+      text-align:center;
+      padding-top: 0.8rem;
+      display:none;
+    }
+
     li{
         display:inline-block;
-        padding: 10px 10px;
+        padding: 0.8rem 0.8rem;
         
+        ${mq[1]}{
+            display:block;
+            border-top: 0.1rem solid #fff;
+            padding: 0.5rem;
+        }
 
     }
 
@@ -52,35 +68,57 @@ const navLink = css`
     cursor: pointer;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
-    line-height: 30px;
+    line-height: 1.9rem;
 `
 
 
 const hamburgerMenu=css`
     display: none;
+    cursor: pointer;
     ${mq[1]}{
       display:block !important;
+      position:absolute;
+      right:0.8rem;
+      top:1.2rem;
     }
     div{
-        width:25px;
-        height:3px;
+        width:1.6rem;
+        height:0.2rem;
         background-color:#0DB3C7;
-        margin-bottom:3px;
+        margin-bottom:0.2rem;
     }
 `
-
+const containerIcon=css`
+    ${mq[1]}{
+        width: 90%;
+    }
+`   
 
 
 
 class MenuComponent extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            activeMenu: false,
+        }
+    }
+
+    async menuToggle(){
+        
+        const currentState = this.state.activeMenu;
+        await this.setState({activeMenu: !currentState});
+
+    }
+
     render(){
         return (
             <header>
                 <nav css = { navbar }>
-                    <div className="auto-m">
+                    <div css={ containerIcon } className="auto-m">
                         <a href="#">Brand</a>
                     </div>
-                    <ul className="auto-m" css ={ navList }>
+                    <ul className={ ['auto-m'] && this.state.activeMenu ? 'active' : '' } css ={ navList }>
                         <li css ={ navLink }><a href="#">HOME</a></li>
                         <li css ={ navLink }><a href="#">SERVICE</a></li>
                         <li css ={ navLink }><a href="#">PORTFOLIO</a></li>
@@ -88,7 +126,7 @@ class MenuComponent extends Component{
                         <li css ={ navLink }><a href="#">TESTIMONIAL</a></li>
                         <li css ={ navLink }><a href="#">CONTACT</a></li>
                     </ul>
-                    <div css={ hamburgerMenu }>
+                    <div css={ hamburgerMenu } onClick={ this.menuToggle.bind(this) }>
                         <div></div>
                         <div></div>
                         <div></div>
