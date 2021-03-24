@@ -60,6 +60,10 @@ injectGlobal`
   .active{
     display:block !important;
   }
+
+  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+  }
 `
 
 const  bodyWraper = css`

@@ -27,6 +27,7 @@ const navbar = css`
 `
 const navList= css`
     list-style-type: none;
+    margin-right: auto;
 
     ${mq[1]}{
       width: 100%;
@@ -113,7 +114,6 @@ class MenuComponent extends Component{
 
     render(){
         return (
-            <header>
                 <nav css = { navbar }>
                     <div css={ containerIcon } className="auto-m">
                         <a href="#">Brand</a>
@@ -132,7 +132,6 @@ class MenuComponent extends Component{
                         <div></div>
                     </div>
                 </nav>
-            </header>
             
         )
     }
