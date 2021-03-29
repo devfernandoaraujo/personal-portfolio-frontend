@@ -34,7 +34,7 @@ const fadeInRight = keyframes`
 `
 //end animation
 
-const frelencerBannerArea = css`
+const freelancerBannerArea = css`
     height: 59.375rem;
     position: relative;
     z-index: 1;
@@ -133,10 +133,20 @@ const bannerAnimation = css`
 
 //end banner image
 
+const softwareEngineerContent = css`
+    margin-right:-3.43rem;
+`
+const softwareEngineerAnimation = css`
+    animation-duration: 500ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    opacity: 1;
+`
+
 class HomeComponent extends Component{
     render(){
         return (
-            <section css = { frelencerBannerArea } id="home">
+            <section css = { freelancerBannerArea } id="home">
                 <div css = { homeBubble }>
                     <div css ={ [bubble, bOne] }> </div>
                     <div css ={ [bubble, bTwo] }> </div>
@@ -146,6 +156,20 @@ class HomeComponent extends Component{
                     <div css ={ [bubble, bSix] }> </div>
                 </div>
                 <img css ={[sShape, cfadeInRight, bannerAnimation ]} alt="banner" src={ bannerImage } />
+                <div className="container" >
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div css={ softwareEngineerContent }>
+                                <h2 css ={ softwareEngineerAnimation } className="react-reveal fadeInUp t-color">
+                                    "Hey there!"
+                                    <br/>
+                                    "I'm Fernando Araujo "
+                                    <span>Software Engineer</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         )
     }
