@@ -161,7 +161,9 @@ class ComingSoonComponent extends Component{
               };
               body{
                 height: 100vh;
+                font-size: 2rem;
               };
+              
               #root{
                 height: 100vh;
               }
