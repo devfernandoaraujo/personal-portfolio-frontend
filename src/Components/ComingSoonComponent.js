@@ -31,7 +31,7 @@ const title = css`
     background-color: rgba(255, 255, 255, 0);
     color: rgba(112, 112, 112, 1);
     text-align: center;
-    font: 4vw 'Spartan', sans-serif;
+    font: 4rem 'Spartan', sans-serif;
     
     
 `
