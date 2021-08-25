@@ -31,7 +31,7 @@ const title = css`
     background-color: rgba(255, 255, 255, 0);
     color: rgba(112, 112, 112, 1);
     text-align: center;
-    font: 4rem 'Spartan', sans-serif;
+    font: 4vw 'Spartan', sans-serif;
     
     
 `
@@ -40,7 +40,7 @@ const subTitle = css`
     opacity: 1;
     display: block;
     color: rgba(255, 255, 255, 1);
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: bold;
     font-style: italic;
     font-family: 'Playfair Display', serif;
