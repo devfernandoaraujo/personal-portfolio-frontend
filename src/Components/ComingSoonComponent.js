@@ -40,7 +40,7 @@ const subTitle = css`
     opacity: 1;
     display: block;
     color: rgba(255, 255, 255, 1);
-    font-size: 2vw;
+    font-size: 2rem;
     font-weight: bold;
     font-style: italic;
     font-family: 'Playfair Display', serif;
