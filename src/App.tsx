@@ -1,4 +1,6 @@
 import React from 'react';
+import {css, injectGlobal } from '@emotion/css/macro';
+import normalize from 'emotion-normalize';
 import logo from './logo.svg';
 import MenuComponent from './Components/Menu';
 import HomeComponent from './Components/Home';
@@ -8,12 +10,24 @@ import SkillsComponent from './Components/Skills';
 import TestimonialComponent from './Components/Testimonial';
 import ContactComponent from './Components/Contact';
 import FooterComponent from './Components/Footer';
-import './App.css';
+
+
+injectGlobal`
+  ${normalize}
+  body{
+        line-height: 2rem;
+        font-size: 1rem;
+        font-family: Open Sans, sans-serif;
+        color: #797979;
+      }
+`
+const body_wrapper = css`
+  overflow: hidden;
+`
 
 const App =() =>{
   return (
-    <div>
-      <div>
+      <div css={body_wrapper}>
         <MenuComponent />
         <HomeComponent />
         <ServicesComponent />
@@ -23,7 +37,6 @@ const App =() =>{
         <ContactComponent />
         <FooterComponent />
       </div>
-    </div>
   );
 }
 
