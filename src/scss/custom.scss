@@ -2527,6 +2527,10 @@ code {
 	font-family: $font-family_2;
 }
 
+.frelencer_banner_area-degrade{
+	background-image: linear-gradient(#FaFaFA,#eaeaea, #ffffff)
+}
+
 .navFixed{
 	background-color: #ffffff;
 	transition: .3s ease-in-out !important;
