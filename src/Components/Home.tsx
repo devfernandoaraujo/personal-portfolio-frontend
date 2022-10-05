@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import MenuComponent from './Menu';
+import NavbarComponent from './Navbar';
 import BannerComponent from './Banner';
 
    
@@ -16,7 +16,7 @@ const HomeCOmponent =() =>{
 
     return(
         <React.Fragment>
-            <MenuComponent />
+            <NavbarComponent />
             <BannerComponent />
         </React.Fragment>
     );

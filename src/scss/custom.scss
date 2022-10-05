@@ -2512,7 +2512,7 @@ $border-color_4: #0db3c7;
 		opacity: .3;
 	}
 }
-/*# sourceMappingURL=main.4928017c.chunk.css.map */
+
 body {
 	margin: 0;
 	font-family: $font-family_1;
@@ -2526,6 +2526,28 @@ body {
 code {
 	font-family: $font-family_2;
 }
+
+.navFixed{
+	background-color: #ffffff;
+	transition: .3s ease-in-out !important;
+
+	.container{
+		.navbar-collapse{
+			.nav{
+				.nav-item{
+					.nav-link::before{
+						background: #111837;
+					}
+					a{
+						color: #111837;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
 .scroll_page {
 	.header_area_one {
 		position: absolute;
