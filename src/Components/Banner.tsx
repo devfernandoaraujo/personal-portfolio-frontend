@@ -102,7 +102,7 @@ const BannerComponent =() =>{
                             <div className={'frelencer_content'}>
                                 <h2 className={'react-reveal fadeInUp t_color'}
                                     style={ BannerComponentStyles.animation.presentation }>
-                                    Hey there!<br /> I'm Martin Solonick Independent <span>Frelencer</span>
+                                    Hey there!<br /> I'm Fernando Araujo <span>Software Engineer</span>
                                 </h2>
                                 <h4 className={'react-reveal fadeInUp'}
                                     style={ BannerComponentStyles.animation.presentation2 }>
