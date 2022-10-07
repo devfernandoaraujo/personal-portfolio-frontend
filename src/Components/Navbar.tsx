@@ -45,10 +45,10 @@ const NavbarComponent =() =>{
                             <div className={'collapse navbar-collapse offset'} id="navbarCollapse">
                                 <ul className={'nav navbar-nav m-auto'}>
                                     <li className={'nav-item'}>
-                                        <a className={'nav-link active'}>Home</a>
+                                        <a href="#home" className={'nav-link active'}>Home</a>
                                     </li>
                                     <li className={'nav-item'}>
-                                        <a className={'nav-link '}>Services</a>
+                                        <a href="#service" className={'nav-link '}>Services</a>
                                     </li>
                                     <li className={'nav-item'}>
                                         <a className={'nav-link'}>Portfolio</a>

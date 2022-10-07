@@ -119,7 +119,7 @@ const BannerComponent =() =>{
                                 </h2>
                                 <h4 className={'react-reveal fadeInUp'}
                                     style={ BannerComponentStyles.animation.presentation2 }>
-                                    <span>I create thousand off website</span>
+                                    <span>I help companies on their digital breand</span>
                                 </h4>
                                 <a href="http://john.wethemez.com/"
                                     className={'react-reveal fadeInUp theme_btn active'}
