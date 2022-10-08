@@ -12668,6 +12668,12 @@ h6 {
 		text-transform: capitalize;
 		letter-spacing: -2px;
 	}
+	h5{
+		font-size: 14px;
+		font-weight: 600;
+		color: $color_4;
+		text-transform: uppercase;
+	}
 	margin-bottom: 30px;
 }
 .service_area_two {
@@ -13919,6 +13925,29 @@ h6 {
 		}
 	}
 }
+
+.carouselSkills{
+	padding-top: 20px;
+	
+	.carousel{
+		.carousel-indicators{
+			margin-bottom: 0rem;
+		}
+		.carousel-inner{
+			padding: 20px 0;
+			.carousel-item{
+				height: 120px;
+				overflow: hidden;
+				.carousel-caption{
+					top: 45%;
+				}
+			}
+		}
+	}
+	
+}
+
+
 @media (max-width:450px) {
 	.navbar.navbar_fixed {
 		.login {
