@@ -54,7 +54,7 @@ const NavbarComponent =() =>{
                                         <a className={'nav-link'}>Portfolio</a>
                                     </li>
                                     <li className={'nav-item'}>
-                                        <a className={'nav-link'}>Skills</a>
+                                        <a href="#skill" className={'nav-link'}>Skills</a>
                                     </li>
                                     <li className={'nav-item'}>
                                         <a className={'nav-link'}>Testimonial</a>
