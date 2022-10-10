@@ -16,49 +16,46 @@ const TestimonialComponent = () =>{
 
     const hotelCards = [
         {
-        imageSrc:
-            'https://images.unsplash.com/photo-1559508551-44bff1de756b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-        title: 'Studio Room',
-        description: 'Lorem ipsum dolor sit amet, consectur dolori',
-        pricingText: 'USD 50/Day',
-        features: ['Free Wifi', 'Free breakfast'],
+            imageSrc: '' ,
+            title: '',
+            name: '',
+            message: 'Lorem ipsum dolor sit amet, consectur dolori',
+            relationship: ''
+        
         },
         {
-        imageSrc:
-            'https://images.unsplash.com/photo-1616940844649-535215ae4eb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-        title: 'Deluxe Room',
-        description: 'Lorem ipsum dolor sit amet, consectur dolori',
-        pricingText: 'USD 80/Day',
-        features: ['Free Wifi', 'Free breakfast'],
+            imageSrc: '' ,
+            title: '',
+            name: '',
+            message: 'Lorem ipsum dolor sit amet, consectur dolori',
+            relationship: ''
+        
         },
         {
-        imageSrc:
-            'https://images.unsplash.com/photo-1599619351208-3e6c839d6828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
-        title: 'King Deluxe Room',
-        description: 'Lorem ipsum dolor sit amet, consectur dolori',
-        pricingText: 'USD 150/Day',
-        features: ['Free Wifi', 'Free breakfast', 'Discounted Meals'],
+            imageSrc: '' ,
+            title: '',
+            name: '',
+            message: 'Lorem ipsum dolor sit amet, consectur dolori',
+            relationship: ''
+        
         },
         {
-        imageSrc:
-            'https://images.unsplash.com/photo-1461092746677-7b4afb1178f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-        title: 'Royal Suite',
-        description: 'Lorem ipsum dolor sit amet, consectur dolori',
-        pricingText: 'USD 299/Day',
-        features: [
-            'Free Wifi',
-            'Free breakfast',
-            'Discounted Meals',
-            "MacBook for work use (hotel's property)",
-        ],
+            imageSrc: '' ,
+            title: '',
+            name: '',
+            message: 'Lorem ipsum dolor sit amet, consectur dolori',
+            relationship: ''
+        
+        },
+        {
+            imageSrc: '' ,
+            title: '',
+            name: '',
+            message: 'Lorem ipsum dolor sit amet, consectur dolori',
+            relationship: ''
+        
         },
     ]
-
-     const sliderSettings = {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: false,
-    }
 
     var settings = {
         dots: true,
@@ -74,18 +71,12 @@ const TestimonialComponent = () =>{
         rtl: true,
         arrows: false,
         appendDots: dots => (
-          <ul className={'slick-dots'} style={{ display: 'block'}} > {dots} </ul>
+          <ul> {dots} </ul>
       ),
       customPaging: i => (
-        <div
-          style={{
-            width: "30px",
-            color: "blue",
-            border: "1px blue solid"
-          }}
-        >
+        <button>
           {i + 1}
-        </div>
+        </button>
       )
         
     };
