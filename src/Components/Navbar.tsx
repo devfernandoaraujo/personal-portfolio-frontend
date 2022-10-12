@@ -66,7 +66,7 @@ const NavbarComponent = () => {
               className={'collapse navbar-collapse offset'}
               id="navbarCollapse"
             >
-              <ul className={'nav navbar-nav m-auto'}>
+              <ul className={'nav navbar-nav m-auto'} id="navbar-menu-top">
                 <li className={'nav-item'}>
                   <a href="#home" className={'nav-link active'}>
                     Home
