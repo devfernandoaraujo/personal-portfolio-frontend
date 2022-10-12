@@ -7,22 +7,18 @@ import TestimonialComponent from './Components/Testimonial';
 import ContactComponent from './Components/Contact';
 import FooterComponent from './Components/Footer';
 
-const App =() =>{
+const App = () => {
   return (
-
-      <div className="body_wrapper">
-        <HomeComponent />
-        <ServicesComponent />
-        <PortfolioComponent />
-        <SkillsComponent />
-        <TestimonialComponent />
-        <ContactComponent />
-        <FooterComponent />
-      </div>
-    
-      
+    <div className="body_wrapper">
+      <HomeComponent />
+      <ServicesComponent />
+      <PortfolioComponent />
+      <SkillsComponent />
+      <TestimonialComponent />
+      <ContactComponent />
+      <FooterComponent />
+    </div>
   );
-}
+};
 
 export default App;
-

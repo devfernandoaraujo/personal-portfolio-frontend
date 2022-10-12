@@ -2576,6 +2576,7 @@ $border-color_4: #0db3c7;
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: $font-family_1;
   -webkit-font-smoothing: antialiased;
@@ -8467,6 +8468,24 @@ code {
     content: '\e09a';
   }
 }
+
+.social_github {
+  font-family: $font-family_4;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
 .social_instagram_circle {
   font-family: $font-family_4;
   speak: none;
