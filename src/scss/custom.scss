@@ -12993,10 +12993,22 @@ h6 {
       margin-bottom: 0;
       line-height: 18px;
     }
-    span {
-      font-size: 13px;
-      color: $color_17;
-      line-height: 12px;
+    .media-body-title {
+      display: flex;
+      flex-direction: column;
+      opacity: 0.8;
+      justify-content: center;
+      width: 100%;
+      align-items: flex-start;
+      padding: 0.9rem 0;
+
+      span {
+        font-size: 13px;
+        color: $color_17;
+        line-height: 18px;
+        font-style: italic;
+        font-weight: 900;
+      }
     }
   }
 }
@@ -14037,21 +14049,21 @@ h6 {
 }
 
 .carouselSkills {
-  padding-top: 20px;
+  margin: 1.7rem 0;
 
-  .carousel {
-    .carousel-indicators {
-      margin-bottom: 0rem;
-    }
-    .carousel-inner {
-      padding: 20px 0;
-      .carousel-item {
-        height: 120px;
-        overflow: hidden;
-        .carousel-caption {
-          top: 45%;
-        }
-      }
+  .carousel-item {
+    display: flex !important;
+    flex-direction: column;
+    height: 120px;
+    overflow: hidden;
+    h6 {
+      position: absolute;
+      top: 75%;
+      font-style: italic;
+      font-weight: 900;
+      line-height: 16px;
+      opacity: 0.6;
+	  width: 100%;
     }
   }
 }

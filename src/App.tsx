@@ -7,6 +7,9 @@ import TestimonialComponent from './Components/Testimonial';
 import ContactComponent from './Components/Contact';
 import FooterComponent from './Components/Footer';
 
+import '../node_modules/slick-carousel/slick/slick.css';
+import '../node_modules/slick-carousel/slick/slick-theme.css';
+
 const App = () => {
   return (
     <div className="body_wrapper">
