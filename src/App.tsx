@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeComponent from './Components/Home';
+import AboutComponent from './Components/About';
 import ServicesComponent from './Components/Services';
 import PortfolioComponent from './Components/Portfolio';
 import SkillsComponent from './Components/Skills';
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <div className="body_wrapper">
       <HomeComponent />
+      <AboutComponent />
       <ServicesComponent />
       <PortfolioComponent />
       <SkillsComponent />

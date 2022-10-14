@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 
 const TestimonialComponent = () => {
-  const init = () => {};
-  init();
 
   const testimonialList = [
     {
