@@ -91,14 +91,7 @@ const BannerComponent = () => {
 
   window.addEventListener('scroll', changeDegrade);
   return (
-    <section
-      className={
-        degrade
-          ? 'frelencer_banner_area frelencer_banner_area-degrade'
-          : 'frelencer_banner_area'
-      }
-      id="home"
-    >
+    <section className={degrade ? 'frelencer_banner_area frelencer_banner_area-degrade' : 'frelencer_banner_area'} id="home">
       <div className={'home_bubble'}>
         <div className={'bubble b_one'} />
         <div className={'bubble b_two'} />
@@ -117,24 +110,14 @@ const BannerComponent = () => {
         <div className={'row'}>
           <div className={'col-lg-6'}>
             <div className={'frelencer_content'}>
-              <h2
-                className={'react-reveal fadeInUp t_color'}
-                style={BannerComponentStyles.animation.presentation}
-              >
+              <h2 className={'react-reveal fadeInUp t_color'} style={BannerComponentStyles.animation.presentation}>
                 Hey there!
                 <br /> I'm Fernando Araujo <span>Software Engineer</span>
               </h2>
-              <h4
-                className={'react-reveal fadeInUp'}
-                style={BannerComponentStyles.animation.presentation2}
-              >
+              <h4 className={'react-reveal fadeInUp'} style={BannerComponentStyles.animation.presentation2}>
                 <span>I help companies on their digital brand</span>
               </h4>
-              <a
-                href="htts//fernandomatosaraujo.com"
-                className={'react-reveal fadeInUp theme_btn active'}
-                style={BannerComponentStyles.animation.contactMe}
-              >
+              <a href="#contacts" className={'react-reveal fadeInUp theme_btn active'} style={BannerComponentStyles.animation.contactMe}>
                 Hire me
               </a>
             </div>
@@ -165,43 +148,20 @@ const BannerComponent = () => {
                 alt=""
                 style={BannerComponentStyles.animation.imageFour}
               />
-              <div
-                className={'react-reveal fadeInDown f_img_five'}
-                style={BannerComponentStyles.animation.imageFive}
-              >
-                <img
-                  className={''}
-                  src={`data:image/png;base64,${binaryImages.imageFive}`}
-                  alt=""
-                />
+              <div className={'react-reveal fadeInDown f_img_five'} style={BannerComponentStyles.animation.imageFive}>
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageFive}`} alt="" />
               </div>
               <div className={'f_img_six'}>
-                <img
-                  className={''}
-                  src={`data:image/png;base64,${binaryImages.imageSix}`}
-                  alt=""
-                />
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageSix}`} alt="" />
               </div>
               <div className={'f_img_seven'}>
-                <img
-                  className={''}
-                  src={`data:image/png;base64,${binaryImages.imageSeven}`}
-                  alt=""
-                />
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageSeven}`} alt="" />
               </div>
               <div className={'f_img_eight'}>
-                <img
-                  className={''}
-                  src={`data:image/png;base64,${binaryImages.imageEight}`}
-                  alt=""
-                />
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageEight}`} alt="" />
               </div>
               <div className={'f_img_nine'}>
-                <img
-                  className={''}
-                  src={`data:image/png;base64, ${binaryImages.imageNine}`}
-                  alt=""
-                />
+                <img className={''} src={`data:image/png;base64, ${binaryImages.imageNine}`} alt="" />
               </div>
             </div>
           </div>

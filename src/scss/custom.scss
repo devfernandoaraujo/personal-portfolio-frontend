@@ -28,8 +28,7 @@ $color_17: #677294;
 $color_18: rgba(13, 179, 209, 0.5);
 $color_19: #6896ea;
 $color_20: #4b5fa4;
-$font-family_1: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$font-family_1: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 $font-family_2: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
 $font-family_3: Poppins, sans-serif;
 $font-family_4: ElegantIcons;
@@ -50,30 +49,22 @@ $border-color_4: #0db3c7;
 @font-face {
   font-family: ElegantIcons;
   src: url(/fonts/ElegantIcons/ElegantIcons.d72ad3f7.eot);
-  src: url(/fonts/ElegantIcons/ElegantIcons.d72ad3f7.eot?#iefix)
-      format('embedded-opentype'),
-    url(/fonts/ElegantIcons/ElegantIcons.fdd9e757.woff) format('woff'),
-    url(/fonts/ElegantIcons/ElegantIcons.f9d179f5.ttf) format('truetype'),
-    url(/fonts/ElegantIcons/ElegantIcons.907b74de.svg#ElegantIcons)
-      format('svg');
+  src: url(/fonts/ElegantIcons/ElegantIcons.d72ad3f7.eot?#iefix) format('embedded-opentype'), url(/fonts/ElegantIcons/ElegantIcons.fdd9e757.woff) format('woff'),
+    url(/fonts/ElegantIcons/ElegantIcons.f9d179f5.ttf) format('truetype'), url(/fonts/ElegantIcons/ElegantIcons.907b74de.svg#ElegantIcons) format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: et-line;
   src: url(/fonts/et-line/et-line.26ec3c7d.eot);
-  src: url(/fonts/et-line/et-line.26ec3c7d.eot?#iefix)
-      format('embedded-opentype'),
-    url(/fonts/et-line/et-line.b01ff252.woff) format('woff'),
-    url(/fonts/et-line/et-line.98126e3e.ttf) format('truetype'),
-    url(/fonts/et-line/et-line.569bd908.svg#et-line) format('svg');
+  src: url(/fonts/et-line/et-line.26ec3c7d.eot?#iefix) format('embedded-opentype'), url(/fonts/et-line/et-line.b01ff252.woff) format('woff'),
+    url(/fonts/et-line/et-line.98126e3e.ttf) format('truetype'), url(/fonts/et-line/et-line.569bd908.svg#et-line) format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Flaticon;
-  src: url(/fonts/Flaticon/Flaticon.ceeb894f.woff2) format('woff2'),
-    url(/fonts/Flaticon/Flaticon.803ca4bc.woff) format('woff');
+  src: url(/fonts/Flaticon/Flaticon.ceeb894f.woff2) format('woff2'), url(/fonts/Flaticon/Flaticon.803ca4bc.woff) format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -1318,22 +1309,19 @@ $border-color_4: #0db3c7;
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg)
-      scale(1);
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
     transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg)
-      scale(1);
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
     transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   80% {
-    -webkit-transform: perspective(400px) translateZ(0) rotateY(1turn)
-      scale(0.95);
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(1turn) scale(0.95);
     transform: perspective(400px) translateZ(0) rotateY(1turn) scale(0.95);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
@@ -1353,22 +1341,19 @@ $border-color_4: #0db3c7;
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg)
-      scale(1);
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
     transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg)
-      scale(1);
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
     transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   80% {
-    -webkit-transform: perspective(400px) translateZ(0) rotateY(1turn)
-      scale(0.95);
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(1turn) scale(0.95);
     transform: perspective(400px) translateZ(0) rotateY(1turn) scale(0.95);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
@@ -2421,28 +2406,22 @@ $border-color_4: #0db3c7;
 @-webkit-keyframes slideInnew2 {
   0% {
     opacity: 0;
-    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0)
-      translate(-10px, 80px);
-    transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0)
-      translate(-10px, 80px);
+    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(-10px, 80px);
+    transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(-10px, 80px);
   }
   to {
-    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0)
-      translate(0);
+    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(0);
     transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(0);
   }
 }
 @keyframes slideInnew2 {
   0% {
     opacity: 0;
-    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0)
-      translate(-10px, 80px);
-    transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0)
-      translate(-10px, 80px);
+    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(-10px, 80px);
+    transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(-10px, 80px);
   }
   to {
-    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0)
-      translate(0);
+    -webkit-transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(0);
     transform: matrix(0.97029, 0.34192, -0.84486, 0.9425, 0, 0) translate(0);
   }
 }
@@ -3734,6 +3713,7 @@ code {
   h4 {
     color: $color_1;
   }
+
   .contact_info {
     ul {
       .item {
@@ -3865,20 +3845,8 @@ code {
     }
     &:nth-child(14) {
       border-radius: 50%;
-      background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(5%, #f78232),
-        color-stop(51%, #f77648),
-        color-stop(90%, #f66961)
-      );
-      background-image: linear-gradient(
-        0deg,
-        #f78232 5%,
-        #f77648 51%,
-        #f66961 90%
-      );
+      background-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #f78232), color-stop(51%, #f77648), color-stop(90%, #f66961));
+      background-image: linear-gradient(0deg, #f78232 5%, #f77648 51%, #f66961 90%);
       box-shadow: 0 19px 29px 0 rgba(0, 0, 0, 0.13);
       right: 380px;
       top: 90px;
@@ -3975,13 +3943,10 @@ code {
     opacity: 0;
     -webkit-transform: translateY(3rem);
     transform: translateY(3rem);
-    -webkit-transition: opacity 1s ease 0.8s, color 0.6s ease,
-      -webkit-transform 1s ease 0.8s;
-    transition: opacity 1s ease 0.8s, color 0.6s ease,
-      -webkit-transform 1s ease 0.8s;
+    -webkit-transition: opacity 1s ease 0.8s, color 0.6s ease, -webkit-transform 1s ease 0.8s;
+    transition: opacity 1s ease 0.8s, color 0.6s ease, -webkit-transform 1s ease 0.8s;
     transition: transform 1s ease 0.8s, opacity 1s ease 0.8s, color 0.6s ease;
-    transition: transform 1s ease 0.8s, opacity 1s ease 0.8s, color 0.6s ease,
-      -webkit-transform 1s ease 0.8s;
+    transition: transform 1s ease 0.8s, opacity 1s ease 0.8s, color 0.6s ease, -webkit-transform 1s ease 0.8s;
     text-align: center;
     margin-bottom: 50px;
     h2 {
@@ -11422,12 +11387,7 @@ h6 {
     display: block;
     width: 30px;
     height: 2px;
-    background-image: -ms-linear-gradient(
-      0deg,
-      #ed3d82 0,
-      #f66264 75%,
-      #fe8645 100%
-    );
+    background-image: -ms-linear-gradient(0deg, #ed3d82 0, #f66264 75%, #fe8645 100%);
     margin: auto auto 5px;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
@@ -11704,6 +11664,11 @@ h6 {
 .about_area_two {
   padding: 120px 0;
 }
+
+.portfolio_area_two {
+  padding: 120px 0;
+}
+
 .n_section_title {
   margin-bottom: 60px;
   .top_border {
@@ -12242,6 +12207,19 @@ h6 {
     }
   }
 }
+
+.alert-fadeIn {
+  -webkit-animation: fadeIn 2s linear 1 forwards;
+  animation: fadeIn 2s linear 1 forwards;
+  -moz-animation: fadeIn 2s linear 1 forwards;
+}
+
+.alert-fadeOut {
+  -webkit-animation: fadeOut 2s linear 1 forwards;
+  animation: fadeOut 2s linear 1 forwards;
+  -moz-animation: fadeOut 2s linear 1 forwards;
+}
+
 .contact-area {
   padding: 120px 0;
   h4 {
@@ -12249,6 +12227,20 @@ h6 {
     color: $color_5;
     text-transform: capitalize;
     padding-bottom: 24px;
+  }
+  .alert {
+    h5 {
+      font: 500 25px/30px Montserrat, sans-serif;
+      color: $color_5;
+      text-transform: capitalize;
+      padding-bottom: 24px;
+    }
+    font-family: $font-family_9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
   }
   .input_form {
     form {
@@ -12258,7 +12250,7 @@ h6 {
         font-weight: 400;
         color: $color_6;
         box-shadow: none;
-        border: 1px solid #ededed;
+        /*border: 1px solid #ededed;*/
         border-radius: 0;
         padding-left: 20px;
         text-transform: capitalize;
@@ -12786,8 +12778,8 @@ h6 {
   margin-bottom: 30px;
 }
 
-.about_area_two{
-	padding: 120px 0;
+.about_area_two {
+  padding: 120px 0;
 }
 
 .service_area_two {
@@ -13669,6 +13661,7 @@ h6 {
     }
     padding-bottom: 90px;
   }
+
   .promo_section {
     .promo_box_one {
       padding: 80px 30px 100px;
@@ -14068,7 +14061,7 @@ h6 {
       font-weight: 900;
       line-height: 16px;
       opacity: 0.6;
-	  width: 100%;
+      width: 100%;
     }
   }
 }

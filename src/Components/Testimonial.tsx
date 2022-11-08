@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 
 const TestimonialComponent = () => {
-
   const testimonialList = [
     {
       imageSrc:
@@ -37,8 +36,7 @@ const TestimonialComponent = () => {
         'https://media-exp1.licdn.com/dms/image/C4E03AQG-gV877A-YwQ/profile-displayphoto-shrink_100_100/0/1623445535400?e=1671062400&v=beta&t=KsdM2_YHZQ2fvr6ki7Z7dCrAu1TdDqCzCnmGt4cjuBk',
       title: 'IT Engineering Coordinator',
       name: 'Victor Thomazi Lucas',
-      message:
-        'Fernando have a impressive technical knowledge, aways ready to help everyone! great team mate!',
+      message: 'Fernando have a impressive technical knowledge, aways ready to help everyone! great team mate!',
       relationship: 'Worked with Fernando on the same team',
     },
     {
@@ -64,22 +62,17 @@ const TestimonialComponent = () => {
     pauseOnHover: true,
     rtl: true,
     arrows: false,
-    appendDots: (dots) => <ul> {dots} </ul>,
-    customPaging: (i) => <button>{i + 1}</button>,
+    appendDots: (dots: any) => <ul> {dots} </ul>,
+    customPaging: (i: number) => <button>{i + 1}</button>,
   };
 
   return (
-    <div className={'testimonial_area_two '} id="testimonial">
+    <div className={'testimonial_area_two bg_color '} id="testimonial">
       <div className={'container'}>
         <div className={'row'}>
           <div className={'col-lg-6'}>
             <div className={'testimonial_img'}>
-              <img
-                src={
-                  process.env.PUBLIC_URL + '/images/testimonial.bc1380d8.svg'
-                }
-                alt=""
-              />
+              <img src={process.env.PUBLIC_URL + '/images/testimonial.bc1380d8.svg'} alt="" />
             </div>
           </div>
           <div className={'col-lg-6'}>
