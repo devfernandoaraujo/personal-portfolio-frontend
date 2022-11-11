@@ -25,7 +25,7 @@ jobs:
         env:
           CI: false
         run: |
-          yarn install
+          yarn install --check-files
           yarn build
 
       #List files on server
