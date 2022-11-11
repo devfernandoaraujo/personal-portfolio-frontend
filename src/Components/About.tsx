@@ -29,7 +29,7 @@ const AboutComponent = () => {
         <div className="row row align-items-center">
           <div className="col-lg-4">
             <div className={'about_img '}>
-              <img src={process.env.PUBLIC_URL + '/images/myself.png'} className={'img-fluid rounded-circle '} alt="" />
+              <img src={process.env.PUBLIC_URL + '/images/myself.png'} className={'img-fluid rounded-circle '} alt="Fernando" />
               <button
                 onClick={() => {
                   handleDownload(process.env.PUBLIC_URL + '/resume/Fernando de Matos Araujo.pdf', 'fernandoResume.pdf');

@@ -71,7 +71,7 @@ const TestimonialComponent = () => {
         <div className={'row'}>
           <div className={'col-lg-6'}>
             <div className={'testimonial_img'}>
-              <img src={process.env.PUBLIC_URL + '/images/testimonial.bc1380d8.svg'} alt="" />
+              <img src={process.env.PUBLIC_URL + '/images/testimonial.bc1380d8.svg'} alt="bc1380d8.svg" />
             </div>
           </div>
           <div className={'col-lg-6'}>
@@ -87,7 +87,7 @@ const TestimonialComponent = () => {
                       <p>{testimonial.message}</p>
                       <div className={'media'}>
                         <div className={'author_img'}>
-                          <img src={testimonial.imageSrc} alt="" />
+                          <img src={testimonial.imageSrc} alt="author_img" />
                         </div>
                         <div className={'media-body'}>
                           <h6>{testimonial.name}</h6>

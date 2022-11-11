@@ -94,7 +94,7 @@ const SkillsComponent = () => {
               <Slider {...settings}>
                 {carouselImages.map((image, index) => (
                   <div key="{index}" className={'carousel-item text-center'}>
-                    <img src={image.src} className={'d-block rounded mx-auto w-50 h-50'} alt="..." />
+                    <img src={image.src} className={'d-block rounded mx-auto w-50 h-50'} alt={image.name} />
                     <h6>{image.name}</h6>
                   </div>
                 ))}
@@ -102,7 +102,7 @@ const SkillsComponent = () => {
             </div>
           </div>
           <div className={'col-lg-6'}>
-            <img className={'fact_img'} src={process.env.PUBLIC_URL + '/images/mobile.d871640b.svg'} alt="" />
+            <img className={'fact_img'} src={process.env.PUBLIC_URL + '/images/mobile.d871640b.svg'} alt="mobile.d871640b.svg" />
           </div>
         </div>
       </div>
