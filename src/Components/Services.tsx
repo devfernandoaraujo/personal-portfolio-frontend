@@ -23,6 +23,7 @@ const ServicesComponent = () => {
                     data-bs-target="#pill-database"
                     href={process.env.PUBLIC_URL + '#service'}
                     role="tab"
+                    aria-label=""
                     aria-controls="pill-database"
                     aria-selected="true"
                   >
@@ -37,6 +38,7 @@ const ServicesComponent = () => {
                     data-bs-target="#pill-problem-solving"
                     href={process.env.PUBLIC_URL + '#service'}
                     role="tab"
+                    aria-label=""
                     aria-controls="pill-problem-solving"
                     aria-selected="false"
                   >
@@ -51,6 +53,7 @@ const ServicesComponent = () => {
                     data-bs-target="#pill-innovative-solution"
                     href={process.env.PUBLIC_URL + '#service'}
                     role="tab"
+                    aria-label=""
                     aria-controls="pill-innovative-solution"
                     aria-selected="false"
                   >
@@ -65,6 +68,7 @@ const ServicesComponent = () => {
                     data-bs-target="#pill-bug-fix"
                     href={process.env.PUBLIC_URL + '#service'}
                     role="tab"
+                    aria-label=""
                     aria-controls="pill-bug-fix"
                     aria-selected="false"
                   >
@@ -78,22 +82,22 @@ const ServicesComponent = () => {
             <div className={'tab-content'} id="myTabContent">
               <div className={'tab-pane fade show active'} id="pill-database" role="tabpanel" aria-labelledby="database-tab">
                 <div className={'service_img'}>
-                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/database-design.svg'} alt="" />
+                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/database-design.svg'} alt="database-design" />
                 </div>
               </div>
               <div className={'tab-pane fade'} id="pill-problem-solving" role="tabpanel" aria-labelledby="problem-solving-tab">
                 <div className={'service_img'}>
-                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/problem-solving.png'} alt="" />
+                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/problem-solving.png'} alt="problem-solving" />
                 </div>
               </div>
               <div className={'tab-pane fade'} id="pill-innovative-solution" role="tabpanel" aria-labelledby="innovative-solution-tab">
                 <div className={'service_img'}>
-                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/innovative-solutions.png'} alt="" />
+                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/innovative-solutions.png'} alt="innovative-solutions.png" />
                 </div>
               </div>
               <div className={'tab-pane fade'} id="pill-bug-fix" role="tabpanel" aria-labelledby="bug-fix-tab">
                 <div className={'service_img'}>
-                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/bug-fixing.png'} alt="" />
+                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/bug-fixing.png'} alt="bug-fixing.png" />
                 </div>
               </div>
             </div>

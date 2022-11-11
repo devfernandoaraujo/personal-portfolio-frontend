@@ -103,7 +103,7 @@ const BannerComponent = () => {
       <img
         className={'react-reveal fadeInRight s_shap'}
         src={process.env.PUBLIC_URL + '/images/banner_img.d852f421.svg'}
-        alt=""
+        alt="banner_img.d852f421.svg"
         style={BannerComponentStyles.animation.banner}
       />
       <div className={'container'}>
@@ -117,7 +117,7 @@ const BannerComponent = () => {
               <h4 className={'react-reveal fadeInUp'} style={BannerComponentStyles.animation.presentation2}>
                 <span>I help companies on their digital brand</span>
               </h4>
-              <a href="#contacts" className={'react-reveal fadeInDown theme_btn active'} style={BannerComponentStyles.animation.contactMe}>
+              <a href="#contacts" aria-label="" className={'react-reveal fadeInDown theme_btn active'} style={BannerComponentStyles.animation.contactMe}>
                 Hire me
               </a>
             </div>
@@ -127,41 +127,41 @@ const BannerComponent = () => {
               <img
                 className={'react-reveal fadeInLeft f_img_one'}
                 src={process.env.PUBLIC_URL + '/images/f_man.20b27179.png'}
-                alt=""
+                alt="f_man.20b27179.png"
                 style={BannerComponentStyles.animation.imageOne}
               />
               <img
                 className={'react-reveal fadeInRight f_img_two'}
                 src={process.env.PUBLIC_URL + '/images/table.1040818b.png'}
-                alt=""
+                alt="table.1040818b.png"
                 style={BannerComponentStyles.animation.imageTwo}
               />
               <img
                 className={'react-reveal fadeInDown f_img_three sticky-top'}
                 src={`data:image/png;base64,${binaryImages.imageThree}`}
-                alt=""
+                alt="imageThree"
                 style={BannerComponentStyles.animation.imageThree}
               />
               <img
                 className={'react-reveal fadeInDown f_img_four'}
                 src={process.env.PUBLIC_URL + '/images/shadow.1add9ee7.png'}
-                alt=""
+                alt="shadow.1add9ee7.png"
                 style={BannerComponentStyles.animation.imageFour}
               />
               <div className={'react-reveal fadeInDown f_img_five'} style={BannerComponentStyles.animation.imageFive}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageFive}`} alt="" />
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageFive}`} alt="imageFive" />
               </div>
               <div className={'f_img_six'}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageSix}`} alt="" />
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageSix}`} alt="imageSix" />
               </div>
               <div className={'f_img_seven'}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageSeven}`} alt="" />
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageSeven}`} alt="img_seven" />
               </div>
               <div className={'f_img_eight'}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageEight}`} alt="" />
+                <img className={''} src={`data:image/png;base64,${binaryImages.imageEight}`} alt="img_eight" />
               </div>
               <div className={'f_img_nine'}>
-                <img className={''} src={`data:image/png;base64, ${binaryImages.imageNine}`} alt="" />
+                <img className={''} src={`data:image/png;base64, ${binaryImages.imageNine}`} alt="img_nine" />
               </div>
             </div>
           </div>
