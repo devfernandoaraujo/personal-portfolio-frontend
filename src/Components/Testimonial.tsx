@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import Slider from 'react-slick';
 
 const TestimonialComponent = () => {
@@ -83,8 +82,8 @@ const TestimonialComponent = () => {
               </div>
               <div>
                 <Slider {...settings}>
-                  {testimonialList.map((testimonial) => (
-                    <div>
+                  {testimonialList.map((testimonial, index) => (
+                    <div key="{index}">
                       <p>{testimonial.message}</p>
                       <div className={'media'}>
                         <div className={'author_img'}>

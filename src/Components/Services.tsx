@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServicesComponent = () => {
   return (
-    <div className={'service_area_two'} id="service">
+    <div className={'service_area_two bg_color'} id="service">
       <div className={'container'}>
         <div className={'row align-items-center flex-row-reverse'}>
           <div className={'col-lg-5'}>

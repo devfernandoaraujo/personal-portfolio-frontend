@@ -134,7 +134,7 @@ const ContactComponent = () => {
             </div>
           </div>
           <div className={'col-lg-7 col-md-12'}>
-            <div className={'react-reveal input_form'}>
+            <div className={'input_form'}>
               <div className={'section_title_two undefined'}>
                 <h6>Contact me</h6>
                 <h2>Let me know here</h2>
