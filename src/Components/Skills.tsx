@@ -92,8 +92,8 @@ const SkillsComponent = () => {
                 <h5>Some of the technologies I work with </h5>
               </div>
               <Slider {...settings}>
-                {carouselImages.map((image) => (
-                  <div className={'carousel-item text-center'}>
+                {carouselImages.map((image, index) => (
+                  <div key="{index}" className={'carousel-item text-center'}>
                     <img src={image.src} className={'d-block rounded mx-auto w-50 h-50'} alt="..." />
                     <h6>{image.name}</h6>
                   </div>

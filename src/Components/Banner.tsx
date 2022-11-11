@@ -117,7 +117,7 @@ const BannerComponent = () => {
               <h4 className={'react-reveal fadeInUp'} style={BannerComponentStyles.animation.presentation2}>
                 <span>I help companies on their digital brand</span>
               </h4>
-              <a href="#contacts" className={'react-reveal fadeInUp theme_btn active'} style={BannerComponentStyles.animation.contactMe}>
+              <a href="#contacts" className={'react-reveal fadeInDown theme_btn active'} style={BannerComponentStyles.animation.contactMe}>
                 Hire me
               </a>
             </div>
