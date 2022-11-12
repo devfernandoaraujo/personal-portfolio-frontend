@@ -23,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #Yarn 2
+.pnp.*
 .yarn/*
 .yarn/cache
 .yarn/patches
@@ -30,6 +31,7 @@ yarn-error.log*
 .yarn/releases
 .yarn/sdks
 .yarn/versions
+
 
 #CSS 
 src/**/*.css
