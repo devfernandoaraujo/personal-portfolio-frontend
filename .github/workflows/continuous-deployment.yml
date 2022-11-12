@@ -35,7 +35,7 @@ jobs:
         env:
           CI: false
         run: |
-          yarn set version berry # changing node version
+          yarn set version 3.2.4 # changing node version
           yarn install --immutable
           yarn dedupe
           yarn build
