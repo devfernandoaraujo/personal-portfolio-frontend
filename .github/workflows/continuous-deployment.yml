@@ -34,8 +34,8 @@ jobs:
     
         env:
           CI: false
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
         run: |
+          yarn config set -H enableImmutableInstalls false
           yarn set version stable # changing node version
           yarn install --immutable
           yarn build
