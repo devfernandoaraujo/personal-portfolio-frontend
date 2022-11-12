@@ -35,9 +35,8 @@ jobs:
         env:
           CI: false
         run: |
-          yarn set version latest # changing node version
+          yarn set version stable # changing node version
           yarn install --immutable
-          yarn dedupe
           yarn build
 
       #List files on server
