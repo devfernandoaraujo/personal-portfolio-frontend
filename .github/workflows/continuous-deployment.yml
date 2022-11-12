@@ -15,17 +15,34 @@ jobs:
   deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+     if:|
+      github.actor == 'dependabot[bot]' &&
+      contains(github.event.pull_request.head.ref, 'dependabot/npm_and_yarn/')
+    # IMPORTANT: setting YARN_ENABLE_SCRIPTS=false is critical to ensure that untrusted
+    # PRs can't add an npm package and then use that to execute untrusted code in
+    # a trusted context. See links at the top of this workflow for further details.
+    # See also: https://github.com/yarnpkg/berry/issues/1679#issuecomment-669937860
+    env:
+      YARN_ENABLE_SCRIPTS: false
+      
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: npm install yarn # Extra Step
-      - name: 🔨 Build Project
+      
+      - name: Configure Node.js
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 16.x
+          
+      - name: 🔨 Personal Portfolio
+    
         env:
           CI: false
         run: |
           yarn install --check-files
+          yarn dedupe
           yarn build
 
       #List files on server
