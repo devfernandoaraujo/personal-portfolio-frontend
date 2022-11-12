@@ -28,12 +28,7 @@ jobs:
         with:
           node-version: '16.x'
           cache: 'yarn'
-          
-      - name: Setup .yarnrc.yml
-        run: |
-          yarn config set deferredVersionFolder "./.yarn/versions"
-          yarn config set enableImmutableCache false
-          yarn config set checksumBehavior: 'update'
+        
     
       - name: 🔨 Personal Portfolio
     
