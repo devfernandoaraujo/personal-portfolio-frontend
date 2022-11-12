@@ -20,13 +20,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - run: npm install yarn # Extra Step
+      - run: npm install yarn@berry # Extra Step
     
       
       - name: Configure Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: '16.x'
           cache: 'yarn'
         
     
@@ -35,8 +35,7 @@ jobs:
         env:
           CI: true
         run: |
-          yarn config set -H enableImmutableInstalls false
-          yarn set version stable # changing node version
+          #yarn set version stable # changing node version
           yarn install --immutable
           yarn build
 
