@@ -33,7 +33,7 @@ jobs:
       - name: 🔨 Personal Portfolio
     
         env:
-          CI: true
+          CI: false
         run: |
           #yarn set version stable # changing node version
           yarn install --immutable
