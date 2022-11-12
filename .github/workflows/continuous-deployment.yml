@@ -38,6 +38,7 @@ jobs:
       - name: Configure Yarn
         uses: mskelton/setup-yarn@v1
         with:
+          ref: ${{ github.head_ref }}
           node-version: '16.x'
           flags: --immutable-cache
           
