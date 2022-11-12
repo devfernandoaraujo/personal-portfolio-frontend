@@ -41,7 +41,7 @@ jobs:
           CI: false
         run: |
           yarn set version berry # changing node version
-          yarn install --frozen-lockfile
+          yarn install --immutable
           yarn dedupe
           yarn build
 
