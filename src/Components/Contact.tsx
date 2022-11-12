@@ -67,7 +67,7 @@ const ContactComponent = () => {
       body: JSON.stringify(formData),
     };
 
-    fetch('http://localhost:8080/contacts', requestOptions)
+    fetch('https://portfolio-service-6kfd.onrender.com', requestOptions)
       .then(async (response) => {
         const data = await response.json();
 
@@ -95,7 +95,6 @@ const ContactComponent = () => {
           variant: 'danger',
           header: 'Error',
         });
-        alert(error);
       });
   };
 
@@ -114,14 +113,18 @@ const ContactComponent = () => {
                 <i className={'flaticon-phone'} />
                 <div className={'media-body'}>
                   <h6>Call Me Now</h6>
-                  <a href="https://fernandomnatosaraujo.com/#" aria-label="">1-778-814-1987</a>
+                  <a href="https://fernandomnatosaraujo.com/#" aria-label="">
+                    1-778-814-1987
+                  </a>
                 </div>
               </div>
               <div className={'media get_item'}>
                 <i className={'flaticon-chat'} />
                 <div className={'media-body'}>
                   <h6>Contact Me</h6>
-                  <a href="https://fernandomnatosaraujo.com/#" aria-label="">contact@fernandomatosaraujo.com</a>
+                  <a href="https://fernandomnatosaraujo.com/#" aria-label="">
+                    contact@fernandomatosaraujo.com
+                  </a>
                 </div>
               </div>
               <div className={'media get_item'}>
