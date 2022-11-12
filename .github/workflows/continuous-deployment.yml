@@ -28,7 +28,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - run: npm install @yarnpkg/cli@4.0.0-rc.28
-      - run: npm install yarn # Extra Step
+      - run: npm install yarn@barry # Extra Step
       
       - name: Configure Node.js
         uses: actions/setup-node@v3
