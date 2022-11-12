@@ -27,6 +27,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
+          cache: 'yarn'
+          
       - name: Setup .yarnrc.yml
         run: |
           yarn config set deferredVersionFolder "./.yarn/versions"
@@ -39,7 +41,7 @@ jobs:
           CI: false
         run: |
           yarn set version berry # changing node version
-          yarn install --immutable
+          yarn install --frozen-lockfile
           yarn dedupe
           yarn build
 
