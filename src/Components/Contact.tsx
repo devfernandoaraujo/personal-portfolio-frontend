@@ -67,7 +67,7 @@ const ContactComponent = () => {
       body: JSON.stringify(formData),
     };
 
-    fetch('https://portfolio-service-6kfd.onrender.com', requestOptions)
+    fetch('https://portfolio-service-6kfd.onrender.com/contacts', requestOptions)
       .then(async (response) => {
         const data = await response.json();
 
