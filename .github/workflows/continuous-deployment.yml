@@ -27,7 +27,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - run: npm install @yarnpkg/cli@4.0.0-rc.28
       - run: npm install yarn@berry # Extra Step
       
       - name: Configure Node.js
@@ -47,6 +46,7 @@ jobs:
         env:
           CI: false
         run: |
+          yarn set version berry # changing node version
           yarn install --immutable
           yarn dedupe
           yarn build
