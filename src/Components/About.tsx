@@ -48,12 +48,12 @@ const AboutComponent = () => {
                 <h2>I help people turn great ideas into ready solutions</h2>
               </div>
               <p>
-                I am a passionate and creative problem-solve software engineer specialized in web development arena. For the lest few years, I have been
-                developing enterprise and portal applications to solve issues related to financial market using C# programming language.
+                I am a passionate and creative problem-solving software engineer specializing in the web development arena. For the last few years, I have been
+                been developing enterprise and portal applications to solve issues related to financial market using C# programming language.
               </p>
               <p>
-                I am hands on in all stages of software development cycle, from planning to deployment. Every day is different on my routine; my tasks may
-                involve analysis algorithms, altering code, fixing bugs, brainstorming ideas or integrating new systems.
+                I am hands-on in all stages of software development cycle, from planning to deployment. Every day is different on my routine; my tasks may
+                involve analysis algorithms, altering code, fixing bugs, brainstorming ideas, or integrating new systems.
               </p>
               <p>
                 The most passionate thing I love in software development is the opportunity to work with people from a wide range of disciplines. The software

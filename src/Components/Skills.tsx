@@ -85,8 +85,7 @@ const SkillsComponent = () => {
                 <h2>Some Interesting Facts About Me.</h2>
               </div>
               <p>
-                I realized that running is a part of my life. Through running I discovered that I can be able to improve my skills on any subject I what to
-                learn or do.{' '}
+                I realized that running is a part of my life. Through running, I discovered that I could improve my skills in any subject I what to learn or do.
               </p>
               <div className={'section_title_two undefined'}>
                 <h5>Some of the technologies I work with </h5>

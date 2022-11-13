@@ -12,7 +12,7 @@ const ServicesComponent = () => {
                 <h2>Innovative solutions to grow your business</h2>
               </div>
               <p>
-                I’m Fernando, a <span>Software Engineer</span> based in Canada. I happy to help you to grow your business.
+                I’m Fernando, a <span>Software Engineer</span> based in Canada. I am happy to help you to grow your business.
               </p>
               <ul className={'nav nav-tabs'} id="myTab" role="tablist">
                 <li className={'nav-item '} role="presentation">
