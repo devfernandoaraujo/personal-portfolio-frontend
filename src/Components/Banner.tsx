@@ -115,7 +115,7 @@ const BannerComponent = () => {
                 <br /> I'm Fernando Araujo <span>Software Engineer</span>
               </h2>
               <h4 className={'react-reveal fadeInUp'} style={BannerComponentStyles.animation.presentation2}>
-                <span>I help companies on their digital brand</span>
+                <span>I help companies with their digital brand</span>
               </h4>
               <a href="#contacts" aria-label="" className={'react-reveal fadeInDown theme_btn active'} style={BannerComponentStyles.animation.contactMe}>
                 Hire me
