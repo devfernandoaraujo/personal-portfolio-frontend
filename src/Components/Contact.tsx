@@ -51,7 +51,6 @@ const ContactComponent = () => {
       form.classList.add('was-validated');
       return;
     }
-
     formData.name = inputName?.current?.value || '';
     formData.email = inputEmail?.current?.value || '';
     formData.subject = inputSubject?.current?.value || '';
@@ -95,6 +94,9 @@ const ContactComponent = () => {
           variant: 'danger',
           header: 'Error',
         });
+      })
+      .finally(() => {
+        form.reset();
       });
   };
 
