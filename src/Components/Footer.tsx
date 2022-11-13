@@ -31,7 +31,7 @@ const FooterComponent = () => {
           <div className={'col-sm-4'}>
             <ul className={' react-reveal list_style'} style={{ opacity: 1 }}>
               <li style={FooterComponentStyle.animation.socialMedia}>
-                <a href={'https://linkedin.com/in/fernandomaraujo/'} rel="noopener noreferrer" target="_blank">
+                <a href={'https://ca.linkedin.com/in/fernandomaraujo'} rel="noopener noreferrer" target="_blank">
                   <i className={'social_linkedin'} />
                 </a>
               </li>
