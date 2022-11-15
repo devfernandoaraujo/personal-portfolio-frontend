@@ -159,7 +159,7 @@ const ContactComponent = () => {
                     <p />
                   </div>
                   <div className={'col-lg-6'}>
-                    <input type="text" className={'form-control'} id="phone" ref={inputPhone} name="phone" placeholder="Phone*" required />
+                    <input type="text" className={'form-control'} id="phone" ref={inputPhone} name="phone" placeholder="1 (777) 846-1987" required />
                     <p />
                   </div>
                 </div>
