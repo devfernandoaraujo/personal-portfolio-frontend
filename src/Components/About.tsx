@@ -49,16 +49,16 @@ const AboutComponent = () => {
               </div>
               <p>
                 I am a passionate and creative problem-solving software engineer specializing in the web development arena. For the last few years, I have been
-                developing enterprise and portal applications to solve issues related to financial market using C# programming language.
+                developing enterprise and portal applications to solve issues related to the financial market using C# programming language.
               </p>
               <p>
-                I am hands-on in all stages of software development cycle, from planning to deployment. Every day is different on my routine; my tasks may
-                involve analysis algorithms, altering code, fixing bugs, brainstorming ideas, or integrating new systems.
+                I am hands-on in all stages of software development cycle, from planning to deployment. Every day is different in my routine; my tasks may
+                involve analyzing algorithms, altering code, fixing bugs, brainstorming ideas, or integrating new systems.
               </p>
               <p>
                 The most passionate thing I love in software development is the opportunity to work with people from a wide range of disciplines. The software
-                development lifecycle involves working with so many different people and departments and, as someone who loves to build new relationships, it’s
-                great to be able to come together with other professionals who are striving towards the same goal.
+                development lifecycle involves working with many different people and departments, allowing me to learn about various topics. As someone who
+                loves to build new relationships, it’s great to come together with other professionals striving towards the same goal.
               </p>
               <p>
                 I love to practice sports and meet new people in my spare time. Some activities I am passionate about are running, volleyball and handball.
