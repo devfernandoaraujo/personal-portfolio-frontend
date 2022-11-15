@@ -49,7 +49,7 @@ const AboutComponent = () => {
               </div>
               <p>
                 I am a passionate and creative problem-solving software engineer specializing in the web development arena. For the last few years, I have been
-                been developing enterprise and portal applications to solve issues related to financial market using C# programming language.
+                developing enterprise and portal applications to solve issues related to financial market using C# programming language.
               </p>
               <p>
                 I am hands-on in all stages of software development cycle, from planning to deployment. Every day is different on my routine; my tasks may
