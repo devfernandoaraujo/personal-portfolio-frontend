@@ -20,6 +20,12 @@ const NavbarComponent = () => {
     }
   };
 
+  const menuHide = () => {
+    let menu = document.getElementById('navbarCollapse');
+
+    menu?.classList.remove('show');
+  };
+
   window.addEventListener('scroll', setFixed);
   return (
     <div className={'sticky-outer-wrapper fixed-top'}>
@@ -57,32 +63,32 @@ const NavbarComponent = () => {
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#service" aria-label="" className={'nav-link '}>
+                  <a href="#service" aria-label="" onClick={menuHide} className={'nav-link '}>
                     Services
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#about" aria-label="" className={'nav-link '}>
+                  <a href="#about" aria-label="" onClick={menuHide} className={'nav-link '}>
                     About
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#portfolio" aria-label="" className={'nav-link'}>
+                  <a href="#portfolio" aria-label="" onClick={menuHide} className={'nav-link'}>
                     Portfolio
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#skill" aria-label="" className={'nav-link'}>
+                  <a href="#skill" aria-label="" onClick={menuHide} className={'nav-link'}>
                     Skills
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#testimonial" aria-label="" className={'nav-link'}>
+                  <a href="#testimonial" aria-label="" onClick={menuHide} className={'nav-link'}>
                     Testimonial
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#contacts" aria-label="" className={'nav-link'}>
+                  <a href="#contacts" aria-label="" onClick={menuHide} className={'nav-link'}>
                     Contact
                   </a>
                 </li>
