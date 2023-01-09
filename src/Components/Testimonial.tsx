@@ -4,8 +4,7 @@ import Slider from 'react-slick';
 const TestimonialComponent = () => {
   const testimonialList = [
     {
-      imageSrc:
-        'https://media-exp1.licdn.com/dms/image/C4D03AQHm7rFbbhYozg/profile-displayphoto-shrink_100_100/0/1553798633575?e=1671062400&v=beta&t=Sor4J9UdoQ3gBb9W6m6_m_2zpyQTjle5-G3HddvgLk8',
+      imageSrc: 'murilo_profile.jfif',
       title: 'Scrum Master / Project Leader',
       name: 'Murilo Faria',
       message:
@@ -13,8 +12,7 @@ const TestimonialComponent = () => {
       relationship: 'Worked with Fernando on the same team',
     },
     {
-      imageSrc:
-        'https://media-exp1.licdn.com/dms/image/C4D03AQEKfPYikDggwQ/profile-displayphoto-shrink_100_100/0/1625233208442?e=1671062400&v=beta&t=8xsLmUgwIoopMPSAw3-NrNku77XRp13YeYMultICp1o',
+      imageSrc: 'renato_profile.jfif',
       title: 'IT Coordinator',
       name: 'Renato Moraes',
       message:
@@ -22,8 +20,7 @@ const TestimonialComponent = () => {
       relationship: 'Worked with Fernando on the same team',
     },
     {
-      imageSrc:
-        'https://media-exp1.licdn.com/dms/image/C5603AQEBhHIZ_zW0Fw/profile-displayphoto-shrink_100_100/0/1517226985510?e=1671062400&v=beta&t=tdphiYme18E_0IG9tYMxpjTlo1TmQCSkdhqpWAlzmws',
+      imageSrc: 'rafael_gil_profile.jfif',
       title: 'Development Coordinator',
       name: 'Rafael Gil Silva',
       message:
@@ -31,16 +28,14 @@ const TestimonialComponent = () => {
       relationship: 'Rafael was Fernando’s client',
     },
     {
-      imageSrc:
-        'https://media-exp1.licdn.com/dms/image/C4E03AQG-gV877A-YwQ/profile-displayphoto-shrink_100_100/0/1623445535400?e=1671062400&v=beta&t=KsdM2_YHZQ2fvr6ki7Z7dCrAu1TdDqCzCnmGt4cjuBk',
+      imageSrc: 'victor_profile.jfif',
       title: 'IT Engineering Coordinator',
       name: 'Victor Thomazi Lucas',
       message: 'Fernando have a impressive technical knowledge, aways ready to help everyone! great team mate!',
       relationship: 'Worked with Fernando on the same team',
     },
     {
-      imageSrc:
-        'https://media-exp1.licdn.com/dms/image/C4E03AQFIx3DsQTlMRA/profile-displayphoto-shrink_100_100/0/1660604276307?e=1671062400&v=beta&t=lameu8xaaBcDN3XaqOIQuKfjL_gicx8bl30NkqAD3-M',
+      imageSrc: 'lesley_profile.jfif',
       title: 'Web Engineer',
       name: 'Lesley Fernandes Moreira',
       message: 'Good professional, dedicated, uses his best for the company.',
@@ -87,7 +82,7 @@ const TestimonialComponent = () => {
                       <p>{testimonial.message}</p>
                       <div className={'media'}>
                         <div className={'author_img'}>
-                          <img src={testimonial.imageSrc} alt="author_img" />
+                          <img src={process.env.PUBLIC_URL + '/images/linkedin_profile/' + testimonial.imageSrc} alt="author_img" />
                         </div>
                         <div className={'media-body'}>
                           <h6>{testimonial.name}</h6>
