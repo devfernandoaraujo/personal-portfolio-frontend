@@ -126,42 +126,42 @@ const BannerComponent = () => {
             <div className={'frelencer_img'}>
               <img
                 className={'react-reveal fadeInLeft f_img_one'}
-                src={process.env.PUBLIC_URL + '/images/f_man.20b27179.png'}
-                alt="f_man.20b27179.png"
+                src={process.env.PUBLIC_URL + '/images/f-man20b27179.webp'}
+                alt="f-man20b27179.webp"
                 style={BannerComponentStyles.animation.imageOne}
               />
               <img
                 className={'react-reveal fadeInRight f_img_two'}
-                src={process.env.PUBLIC_URL + '/images/table.1040818b.png'}
-                alt="table.1040818b.png"
+                src={process.env.PUBLIC_URL + '/images/table1040818b.webp'}
+                alt="table1040818b.webp"
                 style={BannerComponentStyles.animation.imageTwo}
               />
               <img
                 className={'react-reveal fadeInDown f_img_three sticky-top'}
-                src={`data:image/png;base64,${binaryImages.imageThree}`}
+                src={`data:image/webp;base64,${binaryImages.imageThree}`}
                 alt="imageThree"
                 style={BannerComponentStyles.animation.imageThree}
               />
               <img
                 className={'react-reveal fadeInDown f_img_four'}
-                src={process.env.PUBLIC_URL + '/images/shadow.1add9ee7.png'}
-                alt="shadow.1add9ee7.png"
+                src={process.env.PUBLIC_URL + '/images/shadow1add9ee7.webp'}
+                alt="shadow1add9ee7.webp"
                 style={BannerComponentStyles.animation.imageFour}
               />
               <div className={'react-reveal fadeInDown f_img_five'} style={BannerComponentStyles.animation.imageFive}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageFive}`} alt="imageFive" />
+                <img className={''} src={`data:image/webp;base64,${binaryImages.imageFive}`} alt="imageFive" />
               </div>
               <div className={'f_img_six'}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageSix}`} alt="imageSix" />
+                <img className={''} src={`data:image/webp;base64,${binaryImages.imageSix}`} alt="imageSix" />
               </div>
               <div className={'f_img_seven'}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageSeven}`} alt="img_seven" />
+                <img className={''} src={`data:image/webp;base64,${binaryImages.imageSeven}`} alt="img_seven" />
               </div>
               <div className={'f_img_eight'}>
-                <img className={''} src={`data:image/png;base64,${binaryImages.imageEight}`} alt="img_eight" />
+                <img className={''} src={`data:image/webp;base64,${binaryImages.imageEight}`} alt="img_eight" />
               </div>
               <div className={'f_img_nine'}>
-                <img className={''} src={`data:image/png;base64, ${binaryImages.imageNine}`} alt="img_nine" />
+                <img className={''} src={`data:image/webp;base64, ${binaryImages.imageNine}`} alt="img_nine" />
               </div>
             </div>
           </div>

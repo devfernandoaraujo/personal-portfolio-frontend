@@ -87,17 +87,17 @@ const ServicesComponent = () => {
               </div>
               <div className={'tab-pane fade'} id="pill-problem-solving" role="tabpanel" aria-labelledby="problem-solving-tab">
                 <div className={'service_img'}>
-                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/problem-solving.png'} alt="problem-solving" />
+                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/problem-solving.webp'} alt="problem-solving" />
                 </div>
               </div>
               <div className={'tab-pane fade'} id="pill-innovative-solution" role="tabpanel" aria-labelledby="innovative-solution-tab">
                 <div className={'service_img'}>
-                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/innovative-solutions.png'} alt="innovative-solutions.png" />
+                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/innovative-solutions.webp'} alt="innovative-solutions.webp" />
                 </div>
               </div>
               <div className={'tab-pane fade'} id="pill-bug-fix" role="tabpanel" aria-labelledby="bug-fix-tab">
                 <div className={'service_img'}>
-                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/bug-fixing.png'} alt="bug-fixing.png" />
+                  <img id="service_img" src={process.env.PUBLIC_URL + '/images/bug-fixing.webp'} alt="bug-fixing.webp" />
                 </div>
               </div>
             </div>

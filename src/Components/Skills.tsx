@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 const SkillsComponent = () => {
   const carouselImages = [
     {
-      src: process.env.PUBLIC_URL + '/images/asp-net.png',
+      src: process.env.PUBLIC_URL + '/images/asp-net.webp',
       name: 'Asp.net',
     },
     {

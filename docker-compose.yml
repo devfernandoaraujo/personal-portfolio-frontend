@@ -1,0 +1,9 @@
+#Write a docker compose file to run the application
+version: '3'
+services:
+  app:
+    container_name: my-portfolio
+    image: portfolio-image
+    build: .
+    ports:
+      - 8080:80

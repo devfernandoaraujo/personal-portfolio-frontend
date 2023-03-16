@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { observer } from '../helper/effects';
 
 const PortfolioComponent = () => {
   const PortfolioComponentStyle = {
@@ -23,6 +24,12 @@ const PortfolioComponent = () => {
       },
     },
   };
+
+  /*useEffect(() => {
+    let d = document.querySelector('.portfolio_slider_info');
+    observer.observe(d!);
+  }, []);*/
+
   return (
     <div className={'portfolio_area_two bg_color'} id="portfolio">
       <div className={'container'}>
@@ -41,7 +48,7 @@ const PortfolioComponent = () => {
                 <div className={'col-lg-4 col-sm-6'}>
                   <div className={'portfolio_post bg_w  d-flex flex-column'}>
                     <div className={'portfolio_img row'}>
-                      <img className="img-fluid" src={process.env.PUBLIC_URL + '/images/Dor App.png'} alt="Dor App.png" />
+                      <img className="img-fluid" src={process.env.PUBLIC_URL + '/images/dor-app.webp'} alt="dor-app.webp" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
                       <a href="/#" aria-label="">
@@ -67,7 +74,7 @@ const PortfolioComponent = () => {
                 <div className={'col-lg-4 col-sm-6'}>
                   <div className={'portfolio_post bg_w  d-flex flex-column'}>
                     <div className={'portfolio_img row'}>
-                      <img className="img-fluid" src={process.env.PUBLIC_URL + '/images/agiliza.png'} alt="agiliza.png" />
+                      <img className="img-fluid" src={process.env.PUBLIC_URL + '/images/agiliza.webp'} alt="agiliza.webp" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
                       <a href="/#" aria-label="">
