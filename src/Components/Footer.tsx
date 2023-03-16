@@ -44,8 +44,8 @@ const FooterComponent = () => {
                 <a href={'https://github.com/devfernandoaraujo/'} rel="noopener noreferrer" target="_blank">
                   <i className={'social_github'} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                     <img
-                      src={isHovering ? process.env.PUBLIC_URL + '/images/github_hover.png' : process.env.PUBLIC_URL + '/images/github.png'}
-                      alt="github.png"
+                      src={isHovering ? process.env.PUBLIC_URL + '/images/github-hover.webp' : process.env.PUBLIC_URL + '/images/github.webp'}
+                      alt="github.webp"
                     />
                   </i>
                 </a>
