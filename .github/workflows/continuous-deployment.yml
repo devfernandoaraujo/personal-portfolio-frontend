@@ -38,7 +38,7 @@ jobs:
         run: |
           #yarn set version stable # changing node version
           yarn --version 
-          yarn install
+          yarn install --frozen-lockfile
 
       #List files on server
       - name: List output files
