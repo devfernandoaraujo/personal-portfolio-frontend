@@ -6,6 +6,7 @@ import Services from '@/common/components/elements/services';
 import About from '@/common/components/elements/about';
 import Portfolio from '@/common/components/elements/portfolio';
 import Skills from '@/common/components/elements/skills';
+import Testimonial from '@/common/components/elements/testimonial';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Skills />
+      <Testimonial />
     </div>
   );
 }

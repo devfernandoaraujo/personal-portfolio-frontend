@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import Image from 'next/image';
 
 const SkillsComponent = () => {
   const carouselImages = [
@@ -93,7 +94,7 @@ const SkillsComponent = () => {
               <Slider {...settings}>
                 {carouselImages.map((image, index) => (
                   <div key="{index}" className={'carousel-item text-center'}>
-                    <img src={image.src} className={'d-block rounded mx-auto w-50 h-50'} alt={image.name} />
+                    <Image src={image.src} className={'d-block rounded mx-auto w-50 h-50'} alt={image.name} height="60" width="76" />
                     <h6>{image.name}</h6>
                   </div>
                 ))}
@@ -101,7 +102,7 @@ const SkillsComponent = () => {
             </div>
           </div>
           <div className={'col-lg-6'}>
-            <img className={'fact_img'} src="/images/mobile.d871640b.svg" alt="mobile.d871640b.svg" />
+            <Image className={'fact_img'} src="/images/mobile.d871640b.svg" alt="mobile.d871640b.svg" height="540" width="456" />
           </div>
         </div>
       </div>
