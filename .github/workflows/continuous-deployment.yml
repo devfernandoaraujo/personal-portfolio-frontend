@@ -38,6 +38,7 @@ jobs:
           CI: false
         run: |
           #yarn set version stable # changing node version
+          sudo chmod 755 /var/lib
           yarn --version 
           yarn
 
