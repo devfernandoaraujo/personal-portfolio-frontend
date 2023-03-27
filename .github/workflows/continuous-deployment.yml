@@ -39,8 +39,7 @@ jobs:
         run: |
           #yarn set version stable # changing node version
           yarn --version 
-          rm yarn.lock
-          yarn install --check-cache
+          yarn install --frozen-lockfile
           yarn build
 
       #List files on server
