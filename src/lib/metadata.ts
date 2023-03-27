@@ -13,8 +13,8 @@ export const metadata = {
   viewport: {
     width: 'device-width',
     height: 'device-height',
-    initialScale: 1,
-    maximumScale: 1,
+    initialScale: 1.0,
+    maximumScale: 1.0,
   },
   verification: {
     google: '_-UTTe-6_hfOXqUJP4ljARyKHX6z4buPEQsps-tYEHM',
