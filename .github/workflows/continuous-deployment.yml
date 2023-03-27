@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         uses: actions/setup-node@v2
 
-      - run: npm install -g yarn@3.x # Extra Step
+      - run: npm install -g yarn@3.2.4 # Extra Step
 
       - name: 🔨 Personal Portfolio
 
