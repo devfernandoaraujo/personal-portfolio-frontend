@@ -38,7 +38,8 @@ jobs:
           CI: false
         run: |
           #yarn set version stable # changing node version
-          yarn install 
+          yarn --version 
+          yarn install --immutable-cache --no-lockfile
           yarn build
 
       #List files on server
