@@ -26,6 +26,7 @@ jobs:
           node-version: '19.x'
 
       - name: Install dependencies
+        uses: actions/setup-node@v2
       - run: npm install yarn@berry # Extra Step
       - run: yarn set version latest #upgrading yarn
 
