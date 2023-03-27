@@ -15,24 +15,25 @@ jobs:
   deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-      
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - run: npm install yarn@berry # Extra Step
-      - run: yarn set version latest #upgrading yarn
-    
-      
+      - name: Delete .yarn directory
+      - run: rm -rf .yarn
+
       - name: Configure Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '19.x'
-          cache: 'yarn'
-        
-    
+
+      - name: Install dependencies
+      - run: npm install yarn@berry # Extra Step
+      - run: yarn set version latest #upgrading yarn
+
       - name: 🔨 Personal Portfolio
-    
+
         env:
           CI: false
         run: |
