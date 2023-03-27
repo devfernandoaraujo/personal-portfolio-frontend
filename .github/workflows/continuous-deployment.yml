@@ -26,19 +26,13 @@ jobs:
           node-version: '19.8.1'
 
       - name: Install Yarn 3
-        run: |
-          corepack enable
-          corepack prepare yarn@stable --activate
-          yarn set version stable
+        run: npm install -g yarn@berry
 
-      - name: 🔨 Personal Portfolio
+      - name: Install dependencies
+        run: yarn install --immutable
 
-        env:
-          CI: false
-        run: |
-          #yarn set version stable # changing node version
-          yarn --version 
-          yarn build
+      - name: Build Next.js project
+        run: yarn build
 
       #List files on server
       - name: List output files
