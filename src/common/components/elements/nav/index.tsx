@@ -5,12 +5,11 @@ import BannerComponent from '@/common/components/elements/banner';
 
 const NavComponent = () => {
   const [activeMenu, setActiveMenu] = useState(false);
-  useEffect(() => {
-    const toggleMenu = async () => {
-      const currentState = activeMenu;
-      await setActiveMenu(!currentState);
-    };
-  }, []);
+
+  const toggleMenu = async () => {
+    const currentState = activeMenu;
+    await setActiveMenu(!currentState);
+  };
 
   return (
     <React.Fragment>
