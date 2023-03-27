@@ -27,8 +27,8 @@ jobs:
 
       - name: Install dependencies
         uses: actions/setup-node@v2
-      - run: npm install yarn@berry # Extra Step
-      - run: yarn set version stable #upgrading yarn
+        
+      - run: npm install -g yarn@3.x # Extra Step
 
       - name: 🔨 Personal Portfolio
 
@@ -36,10 +36,6 @@ jobs:
           CI: false
         run: |
           #yarn set version stable # changing node version
-          sudo chown -R runner:runner /home/runner/.cache/yarn
-          yarn config set cache-folder ~/.cache/yarn
-          yarn cache clean
-          rm -rf node_modules
           yarn install 
           yarn build
 
