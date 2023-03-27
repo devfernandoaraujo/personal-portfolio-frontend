@@ -36,11 +36,11 @@ jobs:
           CI: false
         run: |
           #yarn set version stable # changing node version
-          yarn install --immutable-cache
-          yarn --version
+          sudo chown -R runner:runner /home/runner/.cache/yarn
+          yarn config set cache-folder ~/.cache/yarn
+          yarn cache clean
           rm -rf node_modules
-          rm -rf .yarn
-          yarn config get cache-folder
+          yarn install 
           yarn build
 
       #List files on server
