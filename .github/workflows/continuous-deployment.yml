@@ -21,8 +21,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          path: personal-portfolio-frontend
+        working-directory: ./src
 
       - name: Configure Node.js
         uses: actions/setup-node@v2
@@ -37,7 +36,6 @@ jobs:
 
       - name: Build Next.js project
         run: yarn build
-        working-directory: personal-portfolio-frontend
 
       #List files on server
       - name: List output files
