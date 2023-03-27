@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         uses: actions/setup-node@v2
       - run: npm install yarn@berry # Extra Step
-      - run: yarn set version latest #upgrading yarn
+      - run: yarn set version stable #upgrading yarn
 
       - name: 🔨 Personal Portfolio
 
