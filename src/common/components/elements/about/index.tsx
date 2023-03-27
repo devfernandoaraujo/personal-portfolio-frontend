@@ -4,17 +4,6 @@ import Image from 'next/image';
 import axios from 'axios';
 import fileDownload from 'js-file-download';
 
-const BannerComponentStyles = {
-  animation: {
-    resume: {
-      animationDuration: '900ms',
-      animationDelay: '0ms',
-      animationIterationCount: 1,
-      opacity: 1,
-    },
-  },
-};
-
 const AboutComponent = () => {
   const handleDownload = async (url: string, filename: string) => {
     axios
@@ -38,7 +27,7 @@ const AboutComponent = () => {
                 aria-label=""
                 className={'btn fadeInDown theme_btn active ' + styles.resume}
                 onClick={() => {
-                  handleDownload('/resume/Fernando de Matos Araujo.pdf', 'fernandoResume.pdf');
+                  handleDownload('/resume/Fernando de Matos Araujo.pdf', 'Fernando_Resume.pdf');
                 }}
               >
                 Resume

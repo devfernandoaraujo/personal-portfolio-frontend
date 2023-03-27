@@ -3,6 +3,8 @@ import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import { metadata } from '@/lib/metadata';
 import React, { useState, useEffect } from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

@@ -1,12 +1,5 @@
 import React, { CSSProperties, useState, useEffect } from 'react';
-
-const NavbarComponentStyles = {
-  innerWrapper: {
-    position: 'relative',
-    zIndex: 9999,
-    transform: 'translate3d(0px, 0px, 0px)',
-  } as React.CSSProperties,
-};
+import styles from '@/styles/Navbar.module.scss';
 
 const NavbarComponent = () => {
   const [fix, setFix] = useState(false);
@@ -32,7 +25,7 @@ const NavbarComponent = () => {
 
   return (
     <div className={'sticky-outer-wrapper fixed-top'}>
-      <div className={'sticky-inner-wrapper'} style={NavbarComponentStyles.innerWrapper}>
+      <div className={'sticky-inner-wrapper ' + styles.innerWrapper}>
         <nav className={fix ? 'navbar navFixed navbar-expand-lg navbar-light menu_two' : 'navbar  navbar-expand-lg navbar-light menu_two'}>
           <div className={'container'}>
             <a href="https://fernandomatosaraujo.com" aria-label="" className={'navbar-brand logo_h'}>

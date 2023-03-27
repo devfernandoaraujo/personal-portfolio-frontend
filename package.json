@@ -22,6 +22,7 @@
     "sass": "latest",
     "sass-loader": "^13.2.1",
     "sharp": "^0.31.3",
+    "slick-carousel": "^1.8.1",
     "typescript": "5.0.2",
     "url-loader": "^4.1.1"
   },
