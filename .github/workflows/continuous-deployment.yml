@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '19.8.1'
           cache: 'yarn'
-          cache-dependency-path: /personal-portfolio-frontend/yarn.lock
+          cache-dependency-path: /yarn.lock
 
       - name: Install Yarn 3
         run: |
