@@ -20,16 +20,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - run: npm install yarn@berry # Extra Step
-      - run: yarn set version latest #upgrading yarn
-    
+      - run: rm -rf .yarn
       
       - name: Configure Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '19.x'
-          cache: 'yarn'
-        
+          
+      - name: Install dependencies
+      - run: npm install yarn@berry # Extra Step
+      - run: yarn set version latest #upgrading yarn
     
       - name: 🔨 Personal Portfolio
     
