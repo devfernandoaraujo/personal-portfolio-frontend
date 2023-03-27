@@ -19,6 +19,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-slick": "^0.29.0",
     "sass": "latest",
     "sass-loader": "^13.2.1",
     "sharp": "^0.31.3",
