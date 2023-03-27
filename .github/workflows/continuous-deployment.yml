@@ -26,10 +26,11 @@ jobs:
           node-version: '19.8.1'
           with-npm: true
 
-      - name: Install dependencies
-        uses: actions/setup-node@v2
-
-      - run: npm install -g yarn@3.0.2 # Extra Step
+      - name: Install Yarn 3
+        run: |
+          curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+          sudo apt-get update && sudo apt-get install yarn=3.0.2-1
 
       - name: 🔨 Personal Portfolio
 
