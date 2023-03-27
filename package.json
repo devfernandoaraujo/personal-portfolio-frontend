@@ -2,60 +2,34 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.59",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "axios": "^1.1.3",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "js-file-download": "^0.4.12",
-    "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "react-slick": "^0.29.0",
-    "sass": "^1.59.3",
-    "slick-carousel": "^1.8.1",
-    "typescript": "^4.8.3",
-    "web-vitals": "^2.1.4",
-    "yarn": "^2.4.3"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@types/node": "18.15.3",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@types/react-slick": "^0.23.10",
+    "axios": "^1.3.4",
+    "eslint": "8.36.0",
+    "eslint-config-next": "latest",
+    "js-file-download": "^0.4.12",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-slick": "^0.29.0",
+    "sass": "latest",
+    "sass-loader": "^13.2.1",
+    "sharp": "^0.31.3",
+    "slick-carousel": "^1.8.1",
+    "typescript": "5.0.2",
+    "url-loader": "^4.1.1"
   },
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
-    "@types/react-slick": "^0.23.10",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
-    "bootstrap": "^5.2.2",
-    "eslint-plugin-react": "latest"
+    "bootstrap": "^5.2.2"
   }
 }
