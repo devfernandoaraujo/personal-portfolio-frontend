@@ -21,10 +21,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
       - name: Configure Node.js
+        uses: actions/checkout@v2
         uses: actions/setup-node@v2
         with:
           node-version: '19.8.1'
           cache: 'yarn'
+          cache:-dependency-path: /personal-portfolio-frontend/yarn.lock
 
       - name: Install Yarn 3
         run: |
