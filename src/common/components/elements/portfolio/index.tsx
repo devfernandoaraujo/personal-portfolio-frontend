@@ -1,10 +1,11 @@
 import styles from '@/styles/Portfolio.module.scss';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PortfolioComponent = () => {
   return (
-    <div className={'portfolio_area_two bg_color'} id="portfolio">
+    <section className={'portfolio_area_two bg_color'} id="portfolio">
       <div className={'container'}>
         <div className={'row'}>
           <div className={'col-lg-12'}>
@@ -20,9 +21,9 @@ const PortfolioComponent = () => {
                       <Image className="img-fluid" src="/images/dor-app.WebP" alt="dor-app.webp" width="148" height="210" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
-                      <a href="/#" aria-label="">
+                      <Link href="/#" aria-label="">
                         <h2>Dor Mobile App</h2>
-                      </a>
+                      </Link>
                       <p>
                         Welcome to the VIP communication channel between you and an exclusive call center, available 24 hours a day to offer differentiated
                         access to the services of the Rede D’Or São Luiz. Everything always in the palm of your hand, through a simple app, but full of
@@ -46,12 +47,12 @@ const PortfolioComponent = () => {
                       <Image className="img-fluid" src="/images/agiliza.webp" alt="agiliza.webp" width="295" height="210" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
-                      <a href="/#" aria-label="">
+                      <Link href="/#" aria-label="">
                         <h2>Agiliza</h2>
-                      </a>
+                      </Link>
                       <p>
                         Having a decision regarding lending money to people takes time and effort. Having this in mind, Agiliza was developed to support Itau
-                        bank's Business Analysts to have all data they need to analyze clients and prospect clients based on a series of parameters such as
+                        bank&apos;s Business Analysts to have all data they need to analyze clients and prospect clients based on a series of parameters such as
                         credit score and the relationship between the client and the bank.
                       </p>
                       <a href="#portfolio" className="read_btn" aria-label="">
@@ -90,7 +91,7 @@ const PortfolioComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

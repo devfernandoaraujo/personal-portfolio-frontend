@@ -8,6 +8,7 @@ import Portfolio from '@/common/components/elements/portfolio';
 import Skills from '@/common/components/elements/skills';
 import Testimonial from '@/common/components/elements/testimonial';
 import Contact from '@/common/components/elements/contact';
+import Footer from '@/common/components/elements/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Skills />
       <Testimonial />
       <Contact />
+      <Footer />
     </div>
   );
 }

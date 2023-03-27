@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ServicesComponent = () => {
   return (
-    <div className={'service_area_two bg_color'} id="service">
+    <section className={'service_area_two bg_color'} id="service">
       <div className={'container'}>
         <div className={'row align-items-center flex-row-reverse'}>
           <div className={'col-lg-5'}>
@@ -105,7 +105,7 @@ const ServicesComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

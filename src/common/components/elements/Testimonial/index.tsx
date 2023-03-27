@@ -62,7 +62,7 @@ const TestimonialComponent = () => {
   };
 
   return (
-    <div className={'testimonial_area_two bg_color '} id="testimonial">
+    <section className={'testimonial_area_two bg_color '} id="testimonial">
       <div className={'container'}>
         <div className={'row'}>
           <div className={'col-lg-6'}>
@@ -101,7 +101,7 @@ const TestimonialComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
