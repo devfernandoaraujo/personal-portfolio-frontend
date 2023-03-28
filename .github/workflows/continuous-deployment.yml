@@ -31,7 +31,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install Yarn 3
-        run: npm install -g yarn@3.0.0
+        run: npm install -g yarn@berry
 
       - name: Set Yarn 3 version to latest
         run: yarn set version latest
