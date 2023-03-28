@@ -27,8 +27,11 @@ jobs:
         with:
           node-version: '19.8.1'
 
+      - name: Clear cache
+        run: npm cache clean --force
+
       - name: Install Yarn 3
-        run: npm install -g yarn@^3
+        run: npm install -g yarn@3.0.0
 
       - name: Set Yarn 3 version to latest
         run: yarn set version latest
