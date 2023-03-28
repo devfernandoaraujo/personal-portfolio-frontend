@@ -28,7 +28,8 @@ jobs:
           node-version: '19.8.1'
 
       - name: Install Yarn 3
-        run: npm install -g yarn@berry
+        run: npm install -g yarn@^3
+        run: yarn set version latest 
 
       - name: Install dependencies
         run: yarn install
