@@ -41,7 +41,7 @@ jobs:
         working-directory: ./
 
       - name: Build Next.js project
-        run: yarn build
+        run: yarn build --output-path=./build
         working-directory: ./
 
       #List files on server
