@@ -59,7 +59,7 @@ jobs:
           # FTP account password
           password: ${{ secrets.FTP_PASSWORD }}
           #Static folder where the application is located
-          local-dir: ./build/
+          local-dir: ./
           port: ${{ secrets.FTP_PORT }}
           log-level: standard
           exclude: .git*
