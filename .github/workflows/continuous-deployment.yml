@@ -48,21 +48,24 @@ jobs:
       - name: List output files
         run: ls
 
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: ./out
+
       #Deploy on FTP
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: appleboy/ssh-action@v0.2.0
         with:
           # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           # FTP account username
           username: ${{ secrets.FTP_USERNAME }}
           # FTP account password
           password: ${{ secrets.FTP_PASSWORD }}
-          #Static folder where the application is located
-          local-dir: ./
           port: ${{ secrets.FTP_PORT }}
-          log-level: standard
-          exclude: .git*
-            .git*/**
-            node_modules/**
-            node_modules/**/*
+          script: |
+            cd /home/user/public_html/
+            rm -rf *
+            unzip /github/workspace/build.zip
