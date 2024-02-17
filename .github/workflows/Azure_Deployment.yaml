@@ -1,0 +1,32 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches:
+      - next_version
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 21
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: fernando-portfolio
+          slot-name: production
+          publish-profile: ${{ secrets.Azure_MY_Portfolio }}
