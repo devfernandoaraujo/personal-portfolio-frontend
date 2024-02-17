@@ -3,7 +3,7 @@ export const metadata = {
   description:
     'I am a passionate c# web developer who is always ready for new challenges. Seeing the satisfaction on the stakeholders and clients faces makes me grateful for one more day of work. Self-Taught Software Engineer / Web developer skilled in C# | MVC | Asp.Net |JavaScript | JQuery |Bootstrap |RESTful API',
   keywords: [
-    'Fernando de Matos Araujo, Full Stack Developer, Software Engineer,C#, MVC, ASP.NET MVC, Jquery, BootStrap,  Entity Framework, React, Next.js, Node.js, TypeScript, JavaScript, SQl Server, MongoDB, MySQL,Docker, Jenkins, Git, GitHub, GitLab, Bitbucket, CI/CD, Agile, Scrum, Kanban, TDD, Clean Code, SOLID, Design Patterns, Clean Architecture, Microservices, Serverless, OAuth, JWT, TDD, BDD, DDD, Clean Code, SOLID, Design Patterns, Clean Architecture, Microservices, Serverless, REST, REST API,  Canada, USA',
+    'Fernando de Matos Araujo, Title:Full Stack Developer, Title:Software Engineer,Language:C#, Framework:MVC, Framework:ASP.NET MVC, Library:Jquery, Framework:BootStrap,  Framework:Entity Framework, Library:React, Library:Next.js, Framework:Node.js, Language:TypeScript, Language:JavaScript, Database:SQl Server, Database:MongoDB, Database:MySQL,Platform:Docker, Automation:Jenkins, Version Control:Git, Version Control:GitHub, Version Control:GitLab, Version Control:Bitbucket, CI/CD, Methodology:Agile, Scrum, Kanban, TDD, Clean Code, SOLID, Design Patterns, Clean Architecture, Microservices, Serverless, OAuth, JWT, BDD, DDD SOLID, Design Patterns, Clean Architecture, Microservices, Serverless, REST, REST API,  Canada, USA',
   ],
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
