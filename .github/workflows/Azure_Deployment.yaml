@@ -26,11 +26,11 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.2.9
+          php-version: 8.1.22
 
       - name: Install dependencies
         run: npm install
-       
+        
       - name: Build
         run: npm run build
 
@@ -39,4 +39,3 @@ jobs:
         with:
           app-name: fernando-portfolio 
           publish-profile: ${{ secrets.Azure_MY_Portfolio }}
-          
