@@ -27,7 +27,13 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: |
+          # Use PHP 8.2.9 for the build process
+          export PHP_VERSION=8.2.9
+          echo "export PHP_VERSION=$PHP_VERSION" >> $GITHUB_ENV
+          
+          # Run your build command, replace with your actual build command
+          npm run build
 
       - name: Login via Azure CLI
         uses: azure/login@v1
