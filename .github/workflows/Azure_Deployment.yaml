@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 21
 
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2.9
+
       - name: Install dependencies
         run: npm install
        
@@ -28,15 +33,7 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      
-      - name: Set PHP Version
-        run: echo "export PHP_VERSION=8.2.9" >> $GITHUB_ENV
-
-      - name: Update Composer dependencies
-        run: |
-          curl -sS https://getcomposer.org/installer | php
-          php composer.phar update --with-all-dependencies
-
+       
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
