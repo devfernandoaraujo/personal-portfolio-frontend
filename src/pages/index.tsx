@@ -5,10 +5,10 @@ import Nav from '@/common/components/elements/nav';
 import Services from '@/common/components/elements/services';
 import About from '@/common/components/elements/about';
 import Portfolio from '@/common/components/elements/portfolio';
-import Skills from '@/common/components/elements/skills'; 
+import Skills from '@/common/components/elements/skills';
+import Testimonial from '@/common/components/elements/testimonial';
 import Contact from '@/common/components/elements/contact';
 import Footer from '@/common/components/elements/footer';
-import TestimonialComponent from '@/common/components/elements/testimonial';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,7 +20,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Skills />
-      <TestimonialComponent />
+      <Testimonial />
       <Contact />
       <Footer />
     </div>
