@@ -20,10 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-      
-      - name: Set PHP Version
-        run: echo "export PHP_VERSION=8.2.9" >> $GITHUB_ENV
-      
+       
       - name: Build
         run: npm run build
 
@@ -35,13 +32,15 @@ jobs:
       - name: Set PHP Version
         run: echo "export PHP_VERSION=8.2.9" >> $GITHUB_ENV
 
+      - name: Update Composer dependencies
+        run: |
+          curl -sS https://getcomposer.org/installer | php
+          php composer.phar update --with-all-dependencies
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: fernando-portfolio
           slot-name: production
           publish-profile: ${{ secrets.Azure_MY_Portfolio }}
-          package: '*.war' 
-          clean: true
-          target-path:  '/home/site/wwwroot/test'
-          restart: true 
+          
