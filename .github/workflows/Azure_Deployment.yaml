@@ -34,15 +34,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Login via Azure CLI
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-       
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: fernando-portfolio
-          #slot-name: production
+          app-name: fernando-portfolio 
           publish-profile: ${{ secrets.Azure_MY_Portfolio }}
           
