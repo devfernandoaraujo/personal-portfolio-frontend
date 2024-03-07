@@ -24,11 +24,6 @@ jobs:
       - name: Set PHP Version
         run: echo "export PHP_VERSION=8.2.9" >> $GITHUB_ENV
       
-      - name: Configure PHP 
-        run: |
-          export PHP_VERSION=8.2.9
-          oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8dc3e60f633f885 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log
-      
       - name: Build
         run: npm run build
 
@@ -38,7 +33,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with:
           app-name: fernando-portfolio
           slot-name: production
