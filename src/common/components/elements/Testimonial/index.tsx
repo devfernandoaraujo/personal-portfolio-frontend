@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import Image from 'next/image';
 
 const TestimonialComponent = () => {
-  const testimonialList = [
+  const testimonialList =[
     {
       imageSrc: '/images/linkedin_profile/murilo_profile.jfif',
       title: 'Scrum Master / Project Leader',
