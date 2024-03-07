@@ -62,46 +62,7 @@ const TestimonialComponent = () => {
   };
 
   return (
-    <section className={'testimonial_area_two bg_color '} id="testimonial">
-      <div className={'container'}>
-        <div className={'row'}>
-          <div className={'col-lg-6'}>
-            <div className={'testimonial_img'}>
-              <Image src="/images/testimonial.bc1380d8.svg" alt="bc1380d8.svg" width="456" height="358" />
-            </div>
-          </div>
-          <div className={'col-lg-6'}>
-            <div className={'testimonial_slider_info'}>
-              <div className={'section_title_two undefined'}>
-                <h6>Partners feedback</h6>
-                <h2>What his partners say about Fernando..</h2>
-              </div>
-              <div>
-                <Slider {...settings}>
-                  {testimonialList.map((testimonial, index) => (
-                    <div key="{index}">
-                      <p>{testimonial.message}</p>
-                      <div className={'media'}>
-                        <div className={'author_img'}>
-                          <Image src={testimonial.imageSrc} alt="author_img" width="56" height="56" />
-                        </div>
-                        <div className={'media-body'}>
-                          <h6>{testimonial.name}</h6>
-                          <div className={'media-body-title'}>
-                            <span>{testimonial.title}</span>
-                            <span>{testimonial.relationship}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </Slider>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <>Test</>
   );
 };
 
