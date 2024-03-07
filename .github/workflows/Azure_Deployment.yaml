@@ -41,3 +41,7 @@ jobs:
           app-name: fernando-portfolio
           slot-name: production
           publish-profile: ${{ secrets.Azure_MY_Portfolio }}
+          package: '*.war' 
+          clean: true
+          target-path:  '/home/site/wwwroot/test'
+          restart: true 
