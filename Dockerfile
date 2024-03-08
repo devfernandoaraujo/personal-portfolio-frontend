@@ -1,13 +1,11 @@
 #Write a dockerfile to build a react app
-FROM node:current-alpine as bulder
-WORKDIR /src
-RUN yarn set version 3.0.0
-COPY package*.json .
-COPY yarn.lock .yarnrc.yml ./
+FROM node:21-alpine3.18 as bulder
+WORKDIR /src 
+COPY package*.json ./ 
 RUN apk add --update python3 make g++ && rm -rf /var/cache/apk/*
-RUN yarn install
+RUN npm install
 COPY . .
-RUN yarn build
+RUN npm run build
 
 #code to run nginx server
 FROM nginx
