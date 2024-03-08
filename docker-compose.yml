@@ -6,4 +6,4 @@ services:
     image: portfolio-image
     build: .
     ports:
-      - 8080:80
+      - 3000:3000
