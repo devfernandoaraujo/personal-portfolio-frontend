@@ -28,7 +28,6 @@
     "typescript": "5.0.2",
     "url-loader": "^4.1.1"
   },
-  "packageManager": "yarn@3.5.0",
   "devDependencies": {
     "bootstrap": "^5.3.3"
   }
