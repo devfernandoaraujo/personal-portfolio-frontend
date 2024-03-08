@@ -11,7 +11,7 @@ RUN yarn build
 
 #code to run nginx server
 FROM nginx
-EXPOSE 80
+EXPOSE 3000
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 COPY --from=bulder /src/build .
