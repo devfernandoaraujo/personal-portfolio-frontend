@@ -42,9 +42,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write #This is required for requesting the JWT
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} 
 
     steps:
       - name: Download artifact from build job
@@ -53,7 +51,7 @@ jobs:
           name: my-portfolio
 
       - name: Unzip artifact for deployment
-        run: unzip release.zip
+        run: unzip -o release.zip
       
       - name: Login to Azure
         uses: azure/login@v1
