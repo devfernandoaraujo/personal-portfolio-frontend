@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App - fernando-portfolio
 
 on:
@@ -44,7 +41,7 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write #This is required for requesting the JWT
+      id-token: write # This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
@@ -58,31 +55,6 @@ jobs:
       - name: Set up environment variable for Azure Web App
         run: echo "WEBSITES_PORT=3001" | tee -a $GITHUB_ENV
 
-      - name: Install Nginx
-        run: sudo apt-get install -y nginx
-
-      - name: Configure Nginx
-        run: |
-          sudo rm /etc/nginx/sites-available/default
-          sudo tee /etc/nginx/sites-available/default > /dev/null <<EOL
-          server {
-            listen 3000;
-            server_name localhost;
-
-            location / {
-              proxy_pass http://localhost:3001; # Adjust the port based on your Node.js app
-              proxy_http_version 1.1;
-              proxy_set_header Upgrade $http_upgrade;
-              proxy_set_header Connection 'upgrade';
-              proxy_set_header Host $host;
-              proxy_cache_bypass $http_upgrade;
-            }
-          }
-          EOL
-
-      - name: Restart Nginx
-        run: sudo systemctl restart nginx
-      
       - name: Login to Azure
         uses: azure/login@v1
         with:
@@ -97,4 +69,3 @@ jobs:
           app-name: 'fernando-portfolio'
           slot-name: 'Production'
           package: .
-          
