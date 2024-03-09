@@ -70,7 +70,7 @@ jobs:
             server_name localhost;
 
             location / {
-              proxy_pass http://localhost:3000; # Adjust the port based on your Node.js app
+              proxy_pass http://localhost:3001; # Adjust the port based on your Node.js app
               proxy_http_version 1.1;
               proxy_set_header Upgrade $http_upgrade;
               proxy_set_header Connection 'upgrade';
