@@ -7,8 +7,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  scripts: {
-    start: 'next start -p 3000',
+   server: {
+    port: process.env.PORT || 3000,
   },
 };
 
