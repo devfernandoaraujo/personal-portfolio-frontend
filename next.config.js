@@ -7,9 +7,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-   server: {
-    port: process.env.PORT || 3000,
-  },
 };
 
 module.exports = nextConfig;
