@@ -93,7 +93,7 @@ const ServicesComponent = () => {
               </div>
               <div className={'tab-pane fade'} id="pill-innovative-solution" role="tabpanel" aria-labelledby="innovative-solution-tab">
                 <div className={'service_img'}>
-                  <Image id="service_img" src="/images/innovative-solutions.WebP" alt="innovative-solutions.webp" width="500" height="450" />
+                  <Image id="service_img" src="/images/innovative-solutions.webp" alt="innovative-solutions.webp" width="500" height="450" />
                 </div>
               </div>
               <div className={'tab-pane fade'} id="pill-bug-fix" role="tabpanel" aria-labelledby="bug-fix-tab">

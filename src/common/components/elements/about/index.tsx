@@ -21,7 +21,7 @@ const AboutComponent = () => {
         <div className="row row align-items-center">
           <div className="col-lg-4">
             <div className={'about_img '}>
-              <Image src="/images/myself.WebP" className={'img-fluid rounded-circle '} alt="Fernando" width="296" height="222" />
+              <Image src="/images/myself.webp" className={'img-fluid rounded-circle '} alt="Fernando" width="296" height="222" />
               <button
                 type="button"
                 aria-label=""
