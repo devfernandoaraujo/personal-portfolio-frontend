@@ -51,14 +51,14 @@ const BannerComponent = () => {
             <div className={'frelencer_img'}>
               <Image
                 className={styles.imageOne + ' react-reveal fadeInLeft f_img_one'}
-                src="/images/f-man20b27179.WebP"
+                src="/images/f-man20b27179.webp"
                 alt="f-man20b27179"
                 width="179"
                 height="236"
               />
               <Image
                 className={styles.imageTwo + ' react-reveal fadeInRight f_img_two'}
-                src="/images/table1040818b.WebP"
+                src="/images/table1040818b.webp"
                 alt="table1040818b"
                 width="339"
                 height="246"
@@ -70,7 +70,7 @@ const BannerComponent = () => {
                 width={162}
                 height={69}
               />
-              <Image className="react-reveal fadeInDown f_img_four imageFour" src="/images/shadow1add9ee7.WebP" alt="shadow1add9ee7" width={412} height={267} />
+              <Image className="react-reveal fadeInDown f_img_four imageFour" src="/images/shadow1add9ee7.webp" alt="shadow1add9ee7" width={412} height={267} />
               <div className={'react-reveal fadeInDown f_img_five ' + styles.imageFive}>
                 <Image className="" src={`data:image/webp;base64,${binaryImages.bannerImages.imageFive}`} alt="imageFive" width={56} height={83} />
               </div>
