@@ -6,7 +6,7 @@ import Services from '@/common/components/elements/services';
 import About from '@/common/components/elements/about';
 import Portfolio from '@/common/components/elements/portfolio';
 import Skills from '@/common/components/elements/skills';
-{/*import Testimonial from '@/common/components/elements/testimonial';*/}
+import Testimonial from '@/common/components/elements/testimonial';
 import Contact from '@/common/components/elements/contact';
 import Footer from '@/common/components/elements/footer';
 
@@ -20,7 +20,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Skills />
-      {/*<Testimonial />*/}
+      <Testimonial />
       <Contact />
       <Footer />
     </div>
