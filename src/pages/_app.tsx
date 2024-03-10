@@ -1,6 +1,7 @@
 import '@/styles/globals.scss';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { metadata } from '@/lib/metadata';
 import React, { useState, useEffect } from 'react';
 import 'slick-carousel/slick/slick.css';
@@ -38,6 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="icons" content={`icon=${metadata.icons.icon}; shortcut=${metadata.icons.shortcut}; apple=${metadata.icons.apple}`}></meta>
       </Head>
       <Component {...pageProps} />;
+       <SpeedInsights />
     </>
   );
 }
