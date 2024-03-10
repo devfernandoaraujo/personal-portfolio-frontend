@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
-const TestimonialComponent = () => {
+const TestimonialsComponent = () => {
   const testimonialList =[
     {
       imageSrc: '/images/linkedin_profile/murilo_profile.jfif',
@@ -105,4 +105,4 @@ const TestimonialComponent = () => {
   );
 };
 
-export default TestimonialComponent;
+export default TestimonialsComponent;
