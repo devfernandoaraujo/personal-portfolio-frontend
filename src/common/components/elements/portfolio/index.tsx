@@ -18,7 +18,7 @@ const PortfolioComponent = () => {
                 <div className={'col-lg-4 col-sm-6'}>
                   <div className={'portfolio_post bg_w  d-flex flex-column'}>
                     <div className={'portfolio_img row'}>
-                      <Image className="img-fluid" src="/images/dor-app.WebP" alt="dor-app.webp" width="148" height="210" />
+                      <Image className="img-fluid" src="/images/dor-app.webp" alt="dor-app.webp" width="148" height="210" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
                       <Link href="/#" aria-label="">

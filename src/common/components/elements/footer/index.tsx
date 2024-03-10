@@ -32,7 +32,7 @@ const FooterComponent = () => {
               <li className={styles.socialMedia}>
                 <a href={'https://github.com/devfernandoaraujo/'} rel="noopener noreferrer" target="_blank">
                   <i className={'social_github'} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-                    <Image src={isHovering ? '/images/github-hover.WebP' : '/images/github.WebP'} alt="github.webp" width="33" height="33" />
+                    <Image src={isHovering ? '/images/github-hover.webp' : '/images/github.webp'} alt="github.webp" width="33" height="33" />
                   </i>
                 </a>
               </li>
