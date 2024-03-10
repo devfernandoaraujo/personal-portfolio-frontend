@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
-const nextConfig = {
-  distDir: 'build',
+const nextConfig = { 
   reactStrictMode: true,
   skipMiddlewareUrlNormalize: true,
   sassOptions: {
