@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Message, { IAlertPops } from '@/common/utils/alert';
+import axios from 'axios';
 
 const ContactComponent = () => {
   const inputName = useRef<HTMLInputElement>(null);
@@ -55,48 +56,41 @@ const ContactComponent = () => {
     formData.subject = inputSubject?.current?.value || '';
     formData.phone = inputPhone?.current?.value || '';
     formData.message = inputMessage?.current?.value || '';
+ 
+    axios.post('https://portfolio-service-6kfd.onrender.com/contacts',{ 
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        phone: formData.phone,
+        message: formData.message
 
-    const requestOptions: RequestInit = {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    };
-
-    fetch('https://portfolio-service-6kfd.onrender.com/contacts', requestOptions)
-      .then(async (response) => {
-        const data = await response.json();
-
-        if (!response.ok) {
-          const error = (data && data.error) || response.status;
-
-          return Promise.reject(error);
-        }
-        setShowAlert(true);
-        setAlertProps({
-          ...alertProps,
-          children: 'I do appreciate your contact. You will hear from me shortly.',
-          icon: 'info',
-          variant: 'success',
-          header: 'Thank you',
-        });
       })
-      .catch((error) => {
-        setShowAlert(true);
+    .then((response) => {
+      if (response.status !== 200) {
+        const error = (response.data && response.data.error) || response.status;
+        return Promise.reject(error);
+      }
 
-        setAlertProps({
-          ...alertProps,
-          children: 'Sorry. It is not possible to deliver your message at the moment. Please try again in a few minutes.',
-          icon: 'danger',
-          variant: 'danger',
-          header: 'Error',
-        });
-      })
-      .finally(() => {
-        form.reset();
+      setShowAlert(true);
+      setAlertProps({
+        ...alertProps,
+        children: 'I do appreciate your contact. You will hear from me shortly.',
+        icon: 'info',
+        variant: 'success',
+        header: 'Thank you',
       });
+    }).catch((error) => {
+      setShowAlert(true);
+      setAlertProps({
+        ...alertProps,
+        children: 'Sorry. It is not possible to deliver your message at the moment. Please try again in a few minutes.',
+        icon: 'danger',
+        variant: 'danger',
+        header: 'Error',
+      });
+    }).finally(() => {
+      form.reset();
+    });
   };
 
   return (

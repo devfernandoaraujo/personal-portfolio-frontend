@@ -1,6 +1,7 @@
-/** @type {import('next').NextConfig} */
+
 const path = require('path');
 const nextConfig = { 
+  productionBrowserSourceMaps: true,
   reactStrictMode: true,
   skipMiddlewareUrlNormalize: true,
   sassOptions: {
@@ -9,6 +10,7 @@ const nextConfig = {
   images: {   
       formats: ['image/avif', 'image/webp'],  
    },
+   devtool: 'source-map',
 };
 
 module.exports = nextConfig;

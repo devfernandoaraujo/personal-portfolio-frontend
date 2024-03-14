@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tsc: build": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "@types/node": "18.15.3",
@@ -30,6 +31,7 @@
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "ts-node": "^10.9.2"
   }
 }
