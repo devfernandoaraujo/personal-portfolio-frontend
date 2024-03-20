@@ -1,7 +1,7 @@
 
 'use client'
 import React, { useEffect, useState } from 'react';
-import styles from '@/styles/alert.module.scss';
+import styles from '@/styles/Alert.module.scss';
 import { useAlertVisible, useAlertVisibleActions } from '@/common/stores';
 
 export interface IAlertPops {
