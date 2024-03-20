@@ -1,4 +1,3 @@
-
 const path = require('path');
 const nextConfig = { 
   productionBrowserSourceMaps: true,
@@ -9,8 +8,7 @@ const nextConfig = {
   },
   images: {   
       formats: ['image/avif', 'image/webp'],  
-   },
-   devtool: 'source-map',
+   }
 };
 
 module.exports = nextConfig;

@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="referrer" content={metadata.referrer}></meta>
         <meta name="color-scheme" content={metadata.colorScheme}></meta>
         <meta name="category" content={metadata.category}></meta>
-        <meta name="theme-color" content={metadata.themeColor}></meta>
+        <meta name="theme-color" content={metadata.themeColor} /> 
         <meta
           name="viewport"
           content={`width=${metadata.viewport.width}, height=${metadata.viewport.height}, initial-scale=${metadata.viewport.initialScale}, maximum-scale=${metadata.viewport.maximumScale}`}
@@ -31,14 +31,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta
           name="og:googleBot"
           content={`index=${metadata.robots.googleBot.index}, follow=${metadata.robots.googleBot.follow}, noimageindex=${metadata.robots.googleBot.noimageindex}, 'max-snippet'=${metadata.robots.googleBot['max-snippet']}, 'max-video-preview'=${metadata.robots.googleBot['max-video-preview']}, 'max-image-preview'=${metadata.robots.googleBot['max-image-preview']}`}
-        ></meta>
-        <meta
-          name="viewport"
-          content={`width=${metadata.viewport.width}, height=${metadata.viewport.height}, initialScale=${metadata.viewport.initialScale}, maximumScale=${metadata.viewport.maximumScale}`}
-        ></meta>
+        ></meta> 
         <meta name="icons" content={`icon=${metadata.icons.icon}; shortcut=${metadata.icons.shortcut}; apple=${metadata.icons.apple}`}></meta>
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
        <SpeedInsights />
     </>
   );

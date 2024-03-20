@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Message, { IAlertPops } from '@/common/utils/alert';
 import axios from 'axios';
+import { useAlertVisible, useAlertVisibleActions } from '@/common/stores';
 
 const ContactComponent = () => {
   const inputName = useRef<HTMLInputElement>(null);
@@ -9,7 +10,8 @@ const ContactComponent = () => {
   const inputPhone = useRef<HTMLInputElement>(null);
   const inputMessage = useRef<HTMLTextAreaElement>(null);
 
-  const [showAlert, setShowAlert] = useState(false);
+  const visible = useAlertVisible();
+  const { toggle } = useAlertVisibleActions();
   const [alertProps, setAlertProps] = useState<IAlertPops>({
     variant: '',
     icon: '',
@@ -32,17 +34,7 @@ const ContactComponent = () => {
     message: '',
   };
 
-  useEffect(() => {
-    const timeId = setTimeout(() => {
-      // After 3 seconds set the show value to false
-      setShowAlert(false);
-    }, 10000);
-
-    return () => {
-      clearTimeout(timeId);
-    };
-  }, [showAlert]);
-
+  
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.stopPropagation();
@@ -57,30 +49,23 @@ const ContactComponent = () => {
     formData.phone = inputPhone?.current?.value || '';
     formData.message = inputMessage?.current?.value || '';
  
-    axios.post('https://portfolio-service-6kfd.onrender.com/contacts',{ 
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        phone: formData.phone,
-        message: formData.message
-
-      })
+    axios.post('https://portfolio-service-6kfd.onrender.com/contacts',formData)
     .then((response) => {
       if (response.status !== 200) {
         const error = (response.data && response.data.error) || response.status;
         return Promise.reject(error);
       }
 
-      setShowAlert(true);
+      toggle();
       setAlertProps({
         ...alertProps,
         children: 'I do appreciate your contact. You will hear from me shortly.',
-        icon: 'info',
+        icon: 'success',
         variant: 'success',
         header: 'Thank you',
       });
     }).catch((error) => {
-      setShowAlert(true);
+      toggle();
       setAlertProps({
         ...alertProps,
         children: 'Sorry. It is not possible to deliver your message at the moment. Please try again in a few minutes.',
@@ -95,7 +80,7 @@ const ContactComponent = () => {
 
   return (
     <section className={'contact-area contact-area-two'} id="contacts">
-      {showAlert && <Message {...alertProps} />}
+      {visible && <Message {...alertProps} />}
       <div className={'container'}>
         <div className={'row'}>
           <div className={'col-lg-5 col-md-12'}>
