@@ -34,15 +34,15 @@ const BannerComponent = () => {
       <div className={'container'}>
         <div className={'row'}>
           <div className={'col-lg-6'}>
-            <div className={'frelencer_content'}>
+            <div itemScope itemType ="https://schema.org/Person" className={'frelencer_content'}>
               <h2 className={'react-reveal fadeInUp t_color ' + styles.presentation}>
                 Hey there!
-                <br /> I&apos;m Fernando Araujo <span>Software Engineer</span>
+                <br itemProp="name" /> I&apos;m Fernando Araujo <span itemProp="jobTitle">Software Engineer</span>
               </h2>
               <h4 className={'react-reveal fadeInUp ' + styles.presentation2}>
-                <span>I help companies with their digital brand</span>
+                <span itemProp="description">I help companies with their digital brand</span>
               </h4>
-              <a href="#contacts" aria-label="" className={'react-reveal fadeInDown theme_btn active ' + styles.contactMe}>
+              <a href="#contacts" aria-label="" className={'react-reveal fadeInDown theme_btn active ' + styles.contactMe}  itemProp="interactionService" itemScope itemType="http://schema.org/SoftwareApplication">
                 Hire me
               </a>
             </div>
