@@ -1,4 +1,8 @@
+
+'use client'
 import React, { useEffect, useState } from 'react';
+import styles from '@/styles/alert.module.scss';
+import { useAlertVisible, useAlertVisibleActions } from '@/common/stores';
 
 export interface IAlertPops {
   variant: string;
@@ -8,12 +12,13 @@ export interface IAlertPops {
 }
 
 const Alert = (props: IAlertPops) => {
-  const [visible, setVisible] = useState(false);
+  const visible = useAlertVisible();
+  const { toggle } = useAlertVisibleActions();
 
   useEffect(() => {
     const timeId = setTimeout(() => {
-      setVisible(true);
-    }, 9000);
+      toggle()
+    }, 5000 );
 
     return () => {
       clearTimeout(timeId);
@@ -21,40 +26,50 @@ const Alert = (props: IAlertPops) => {
   }, []);
 
   return (
-    <React.Fragment>
+    <div>
       <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
-        <symbol id="alert-icon-success" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+        <symbol id="alert-icon-success" fill="currentColor"  viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 .5c-.662 0-1.77.249-2.813.525a61.11 61.11 0 0 0-2.772.815 1.454 1.454 0 0 0-1.003 1.184c-.573 4.197.756 7.307 2.368 9.365a11.192 11.192 0 0 0 2.417 2.3c.371.256.715.451 1.007.586.27.124.558.225.796.225s.527-.101.796-.225c.292-.135.636-.33 1.007-.586a11.191 11.191 0 0 0 2.418-2.3c1.611-2.058 2.94-5.168 2.367-9.365a1.454 1.454 0 0 0-1.003-1.184 61.09 61.09 0 0 0-2.772-.815C9.77.749 8.663.5 8 .5zm2.854 6.354a.5.5 0 0 0-.708-.708L7.5 8.793 6.354 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
         </symbol>
         <symbol id="alert-icon-info" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+          <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
         </symbol>
         <symbol id="alert-icon-warning" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+          <path d="M9.97 4.88l.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/>
         </symbol>
         <symbol id="alert-icon-danger" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+          <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
         </symbol>
       </svg>
-      <div className={`alert alert-${props.variant} align-items-center ${!visible ? 'alert-fadeIn' : 'alert-fadeOut'}`} role="alert">
-        <h5 className={'text-center alert-heading'}>
-          <strong>{`${props.header ? props.header : 'Well done!'}`}</strong>{' '}
-        </h5>
-        <hr />
+      <div className={`alert alert-${props.variant} align-items-center ${visible ? 'alert-fadeIn' : 'alert-fadeOut'}`} role="alert">
         <p className={'flex-d'}>
           <div className={'row'}>
-            <div className={'col-1'}>
-              <svg className="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label={`${props.variant}:`}>
-                <use xlinkHref={`#alert-icon-${props.icon}`} />
-              </svg>
-            </div>
-            <div className={'col-11 align-items-left'}>
-              <em>{`${props.children}`}</em>
-            </div>
+              <div className={'col-2'}>
+                 <div className={styles.svgContainer}>
+                    <svg className="bi flex-shrink-0 me-2" width="67" height="67" role="img" aria-label={`${props.variant}:`}>
+                      <use xlinkHref={`#alert-icon-${props.icon}`} />
+                    </svg>
+                  </div>
+              </div>
+              <div className={'col-10 align-items-left'}>
+                 <div className={'row'}>
+                    <div className={'col-12 align-items-left'}>
+                      <h5 className={'text-center alert-heading'}>
+                        <strong>{`${props.header ? props.header : 'Well done!'}`}</strong>{' '}
+                      </h5>
+                      <hr />
+                    </div>
+                 </div>
+                 <div className={'row'}>
+                    <div className={'col-12 align-items-left'}>
+                      <em>{`${props.children}`}</em>
+                    </div>
+                 </div>
+              </div>
           </div>
-        </p>
+        </p> 
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

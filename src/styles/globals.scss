@@ -1116,17 +1116,21 @@ $border-color_4: #0db3c7;
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
+    
   }
   to {
     opacity: 0;
+    transform: translateY(-20px);
   }
 }
 @keyframes fadeOut {
   0% {
     opacity: 1;
+    transform: translateY(0);
   }
   to {
     opacity: 0;
+    transform: translateY(-20px);
   }
 }
 @-webkit-keyframes fadeOutDown {
@@ -12263,15 +12267,15 @@ h6 {
 }
 
 .alert-fadeIn {
-  -webkit-animation: fadeIn 2s linear 1 forwards;
-  animation: fadeIn 2s linear 1 forwards;
+  -webkit-animation: fadeIn 2s linear 1 forwards; 
   -moz-animation: fadeIn 2s linear 1 forwards;
+  animation: fadeIn 2s linear 1 forwards;
 }
 
 .alert-fadeOut {
-  -webkit-animation: fadeOut 2s linear 1 forwards;
-  animation: fadeOut 2s linear 1 forwards;
-  -moz-animation: fadeOut 2s linear 1 forwards;
+  -webkit-animation: fadeOut 2s ease-out 1 forwards; 
+  -moz-animation: fadeOut 2s ease-out 1 forwards;
+  animation: fadeOut 2s ease-out 1 forwards;
 }
 
 .contact-area {
@@ -12283,11 +12287,13 @@ h6 {
     padding-bottom: 24px;
   }
   .alert {
+    p{
+      margin-bottom: 0px;
+    }
     h5 {
-      font: 500 25px/30px Montserrat, sans-serif;
+      font: 500 40px/30px Montserrat, sans-serif;
       color: $color_5;
-      text-transform: capitalize;
-      padding-bottom: 24px;
+      text-transform: capitalize; 
     }
     font-family: $font-family_9;
     position: fixed;
