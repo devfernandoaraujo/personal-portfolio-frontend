@@ -1,9 +1,10 @@
+import { NextPage } from 'next'
 import React, { useRef, useState, useEffect } from 'react';
 import Message, { IAlertPops } from '@/common/utils/alert';
 import axios from 'axios';
 import { useAlertVisible, useAlertVisibleActions } from '@/common/stores';
 
-const ContactComponent = () => {
+const ContactComponent : NextPage = () => {
   const inputName = useRef<HTMLInputElement>(null);
   const inputEmail = useRef<HTMLInputElement>(null);
   const inputSubject = useRef<HTMLInputElement>(null);
@@ -49,7 +50,7 @@ const ContactComponent = () => {
     formData.phone = inputPhone?.current?.value || '';
     formData.message = inputMessage?.current?.value || '';
  
-    axios.post('https://portfolio-service-6kfd.onrender.com/contacts',formData)
+    axios.post('https://api-portfolio.fernandomatosaraujo.com/contacts',formData)
     .then((response) => {
       if (response.status !== 200) {
         const error = (response.data && response.data.error) || response.status;

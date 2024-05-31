@@ -1,8 +1,9 @@
+import { NextPage } from 'next'
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
-const TestimonialsComponent = () => {
+const TestimonialsComponent : NextPage = () => {
   const testimonialList =[
     {
       imageSrc: '/images/linkedin_profile/murilo_profile.jfif',

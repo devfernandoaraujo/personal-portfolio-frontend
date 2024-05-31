@@ -1,9 +1,10 @@
+import { NextPage } from 'next'
 import styles from '@/styles/Banner.module.scss';
 import React, { CSSProperties, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { binaryImages } from '@/common/utils/binaryImages';
 
-const BannerComponent = () => {
+const BannerComponent : NextPage = () => {
   const [degrade, setDegrade] = useState(false);
 
   useEffect(() => {

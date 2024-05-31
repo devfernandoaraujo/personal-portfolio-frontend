@@ -1,10 +1,11 @@
+import { NextPage } from 'next'
 import styles from '@/styles/About.module.scss';
 import React, { CSSProperties, useState, useEffect } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
 import fileDownload from 'js-file-download';
 
-const AboutComponent = () => {
+const AboutComponent : NextPage = () => {
   const handleDownload = async (url: string, filename: string) => {
     axios
       .get(url, {

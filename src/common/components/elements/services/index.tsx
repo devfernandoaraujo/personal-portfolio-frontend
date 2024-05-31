@@ -1,7 +1,8 @@
+import { NextPage } from 'next'
 import React from 'react';
 import Image from 'next/image';
 
-const ServicesComponent = () => {
+const ServicesComponent : NextPage = () => {
   return (
     <section className={'service_area_two bg_color'} id="service">
       <div className={'container'}>

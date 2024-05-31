@@ -1,8 +1,9 @@
+import { NextPage } from 'next'
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
-const SkillsComponent = () => {
+const SkillsComponent : NextPage = () => {
   const carouselImages = [
     {
       src: '/images/asp-net.webp',

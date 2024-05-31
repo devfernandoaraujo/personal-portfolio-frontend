@@ -1,9 +1,10 @@
+import { NextPage } from 'next'
 import styles from '@/styles/Portfolio.module.scss';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PortfolioComponent = () => {
+const PortfolioComponent: NextPage = () => {
   return (
     <section className={'portfolio_area_two bg_color'} id="portfolio">
       <div className={'container'}>
