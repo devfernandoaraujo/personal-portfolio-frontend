@@ -65,18 +65,18 @@ const PortfolioComponent: NextPage = () => {
                 <div className={'col-lg-4 col-sm-6'}>
                   <div className={'portfolio_post bg_w  d-flex flex-column'}>
                     <div className={'portfolio_img d-flex col-12'}>
-                      <span className={'placeholder col-12'}></span>
+                       <Image className="img-fluid" src="/images/election-Estimator.webp" alt="election-Estimator.webp" width="295" height="210" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
-                      <a href={'https://github.com/devfernandoaraujo/SignalRChat'} aria-label="" rel="noopener noreferrer">
-                        <h2>Chat App</h2>
+                      <a href={'https://elections-estimator.onefeather.ca/'} target={'_blank'} aria-label="" rel="noopener noreferrer">
+                        <h2>Elections Estimator</h2>
                       </a>
                       <p>
-                        Demo application that simplifies the process of adding real-time web functionality to applications. The main idea behind this app is to
-                        interact between two or more people through real-time text messages.
+                        Smart automation to support First Nations' traditions and governance with a strategy and timeline tool for elections management; 
+                        creating a quicker and easier way to accommodate community needs.
                       </p>
                       <a
-                        href={'https://github.com/devfernandoaraujo/SignalRChat'}
+                        href={"https://news.onefeather.ca/onefeather-launches-new-ai-tool-for-first-nations'-elections"}
                         aria-label=""
                         rel="noopener noreferrer"
                         className="read_btn"
