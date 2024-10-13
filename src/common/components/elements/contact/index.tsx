@@ -50,7 +50,7 @@ const ContactComponent : NextPage = () => {
     formData.phone = inputPhone?.current?.value || '';
     formData.message = inputMessage?.current?.value || '';
  
-    axios.post('https://api-portfolio.fernandomatosaraujo.com/contacts',formData)
+    axios.post('https://fernando-portfolio-backend.azurewebsites.net/contacts',formData)
     .then((response) => {
       if (response.status !== 200) {
         const error = (response.data && response.data.error) || response.status;
