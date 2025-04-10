@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import React, { useRef, useState, useEffect } from 'react';
 import Message, { IAlertPops } from '@/common/utils/alert';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { useAlertVisible, useAlertVisibleActions } from '@/common/stores';
 
 const ContactComponent : NextPage = () => {
@@ -39,44 +39,62 @@ const ContactComponent : NextPage = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.stopPropagation();
+
     const form = event.currentTarget;
+    
     if (!form.checkValidity()) {
       form.classList.add('was-validated');
       return;
     }
-    formData.name = inputName?.current?.value || '';
-    formData.email = inputEmail?.current?.value || '';
-    formData.subject = inputSubject?.current?.value || '';
-    formData.phone = inputPhone?.current?.value || '';
-    formData.message = inputMessage?.current?.value || '';
- 
-    axios.post('https://api-portfolio.fernandomatosaraujo.com/contacts',formData)
-    .then((response) => {
-      if (response.status !== 200) {
-        const error = (response.data && response.data.error) || response.status;
-        return Promise.reject(error);
-      }
+
+     const jsonData = JSON.stringify({
+      name: inputName?.current?.value || '',
+      email: inputEmail?.current?.value || '',
+      subject: inputSubject?.current?.value || '',
+      phone: inputPhone?.current?.value || '',
+      message: inputMessage?.current?.value || ''
+    });
+  
+    try {
+      const response = await axios.post(
+        'https://api-portfolio.fernandomatosaraujo.com/contacts',
+        jsonData,
+        {
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
 
       toggle();
       setAlertProps({
         ...alertProps,
-        children: 'I do appreciate your contact. You will hear from me shortly.',
+        children: 'Thank you for your message!',
         icon: 'success',
         variant: 'success',
-        header: 'Thank you',
+        header: 'Success',
       });
-    }).catch((error) => {
-      toggle();
-      setAlertProps({
-        ...alertProps,
-        children: 'Sorry. It is not possible to deliver your message at the moment. Please try again in a few minutes.',
-        icon: 'danger',
-        variant: 'danger',
-        header: 'Error',
-      });
-    }).finally(() => {
+    } catch (error) {
+        const err = error as AxiosError;
+        let errorMessage = 'Sorry. It is not possible to deliver your message at the moment. Please try again in a few minutes.';
+        
+        if (err.code === 'ECONNABORTED') {
+          errorMessage = 'Request timed out. Please check your connection.';
+        } else if (err.response) {
+          console.error('Server responded with:', err.response.status);
+        } else if (err.request) {
+          console.error('No response received:', err.request);
+        }
+
+        toggle();
+        setAlertProps({
+          ...alertProps,
+          children: errorMessage,
+          icon: 'danger',
+          variant: 'danger',
+          header: 'Error',
+        });
+    } finally {
       form.reset();
-    });
+    }
   };
 
   return (
