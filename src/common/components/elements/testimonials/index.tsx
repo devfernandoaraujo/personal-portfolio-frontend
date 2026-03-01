@@ -45,7 +45,7 @@ const TestimonialsComponent : NextPage = () => {
     },
   ];
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -73,14 +73,14 @@ const TestimonialsComponent : NextPage = () => {
           </div>
           <div className={'col-lg-6'}>
             <div className={'testimonial_slider_info'}>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h6>Partners feedback</h6>
                 <h2>What his partners say about Fernando..</h2>
               </div>
               <div>
                 <Slider {...settings}>
                   {testimonialList.map((testimonial, index) => (
-                    <div key="{index}">
+                    <div key={index}>
                       <p>{testimonial.message}</p>
                       <div className={'media'}>
                         <div className={'author_img'}>

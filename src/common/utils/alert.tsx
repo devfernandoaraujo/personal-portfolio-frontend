@@ -23,7 +23,7 @@ const Alert = (props: IAlertPops) => {
     return () => {
       clearTimeout(timeId);
     };
-  }, []);
+  }, [toggle]);
 
   return (
     <div>
@@ -73,7 +73,7 @@ const Alert = (props: IAlertPops) => {
   );
 };
 
-Alert.defaultPros = {
+Alert.defaultProps = {
   variant: 'info',
 };
 

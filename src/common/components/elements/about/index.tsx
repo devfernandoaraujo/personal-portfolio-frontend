@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import styles from '@/styles/About.module.scss';
-import React, { CSSProperties, useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import axios from 'axios';
 import fileDownload from 'js-file-download';
@@ -25,7 +25,6 @@ const AboutComponent : NextPage = () => {
               <Image src="/images/myself.webp" className={'img-fluid rounded-circle '} alt="Fernando" width="296" height="222" />
               <button
                 type="button"
-                aria-label=""
                 className={'btn fadeInDown theme_btn active ' + styles.resume}
                 onClick={() => {
                   handleDownload('/resume/Fernando de Matos Araujo.pdf', 'Fernando_Resume.pdf');
@@ -37,7 +36,7 @@ const AboutComponent : NextPage = () => {
           </div>
           <div className="col-lg-8 ps-5">
             <div className={'about_content_two'}>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h6>Who I am</h6>
                 <h2>I help people turn great ideas into ready solutions</h2>
               </div>
