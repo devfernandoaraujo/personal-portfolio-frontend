@@ -16,6 +16,10 @@ const NavbarComponent = () => {
     };
 
     window.addEventListener('scroll', setFixed);
+
+    return () => {
+      window.removeEventListener('scroll', setFixed);
+    };
   }, []);
 
   useEffect(() => {
@@ -80,37 +84,37 @@ const NavbarComponent = () => {
             <div className={'collapse navbar-collapse offset'} id="navbarCollapse">
               <ul className={'nav navbar-nav m-auto'} id="navbar-menu-top">
                 <li className={'nav-item'}>
-                  <a href="#home" aria-label="" className={activeSection === 'home' ? 'nav-link  active' : 'nav-link'}>
+                  <a href="#home" className={activeSection === 'home' ? 'nav-link  active' : 'nav-link'}>
                     Home
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#service" aria-label="" onClick={menuHide} className={activeSection === 'service' ? 'nav-link  active' : 'nav-link'}>
+                  <a href="#service" onClick={menuHide} className={activeSection === 'service' ? 'nav-link  active' : 'nav-link'}>
                     Services
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#about" aria-label="" onClick={menuHide} className={activeSection === 'about' ? 'nav-link  active' : 'nav-link'}>
+                  <a href="#about" onClick={menuHide} className={activeSection === 'about' ? 'nav-link  active' : 'nav-link'}>
                     About
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#portfolio" aria-label="" onClick={menuHide} className={activeSection === 'portfolio' ? 'nav-link  active' : 'nav-link'}>
+                  <a href="#portfolio" onClick={menuHide} className={activeSection === 'portfolio' ? 'nav-link  active' : 'nav-link'}>
                     Portfolio
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#skill" aria-label="" onClick={menuHide} className={activeSection === 'skill' ? 'nav-link  active' : 'nav-link'}>
+                  <a href="#skill" onClick={menuHide} className={activeSection === 'skill' ? 'nav-link  active' : 'nav-link'}>
                     Skills
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#testimonial" aria-label="" onClick={menuHide} className={activeSection === 'testimonial' ? 'nav-link  active' : 'nav-link'}>
+                  <a href="#testimonial" onClick={menuHide} className={activeSection === 'testimonial' ? 'nav-link  active' : 'nav-link'}>
                     Testimonial
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#contacts" aria-label="" onClick={menuHide} className={activeSection === 'contacts' ? 'nav-link  active' : 'nav-link'}>
+                  <a href="#contacts" onClick={menuHide} className={activeSection === 'contacts' ? 'nav-link  active' : 'nav-link'}>
                     Contact
                   </a>
                 </li>

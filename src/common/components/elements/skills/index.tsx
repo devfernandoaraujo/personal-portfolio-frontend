@@ -59,7 +59,7 @@ const SkillsComponent : NextPage = () => {
     },
   ];
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -82,19 +82,19 @@ const SkillsComponent : NextPage = () => {
         <div className={'row align-items-center'}>
           <div className={'col-lg-6'}>
             <div className={'skill_content_two'}>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h6>My Featured Skills</h6>
                 <h2>Some Interesting Facts About Me.</h2>
               </div>
               <p>
                 I realized that running is a part of my life. Through running, I discovered that I could improve my skills in any subject I what to learn or do.
               </p>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h5>Some of the technologies I work with </h5>
               </div>
               <Slider {...settings}>
                 {carouselImages.map((image, index) => (
-                  <div key="{index}" className={'carousel-item text-center'}>
+                  <div key={index} className={'carousel-item text-center'}>
                     <Image src={image.src} className={'d-block rounded mx-auto w-50 h-50'} alt={image.name} height="60" width="76" />
                     <h6>{image.name}</h6>
                   </div>

@@ -19,23 +19,6 @@ const ContactComponent : NextPage = () => {
     children: '',
   });
 
-  interface FormDataType {
-    name: string;
-    email: string;
-    subject: string;
-    phone: string;
-    message: string;
-  }
-
-  const formData: FormDataType = {
-    name: '',
-    email: '',
-    subject: '',
-    phone: '',
-    message: '',
-  };
-
-  
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.stopPropagation();
@@ -57,7 +40,7 @@ const ContactComponent : NextPage = () => {
   
     try {
       const response = await axios.post(
-        'https://api-portfolio.fernandomatosaraujo.com/contacts',
+        `${process.env.NEXT_PUBLIC_API_URL}/contacts`,
         jsonData,
         {
           headers: { 'Content-Type': 'application/json' }
@@ -78,10 +61,6 @@ const ContactComponent : NextPage = () => {
         
         if (err.code === 'ECONNABORTED') {
           errorMessage = 'Request timed out. Please check your connection.';
-        } else if (err.response) {
-          console.error('Server responded with:', err.response.status);
-        } else if (err.request) {
-          console.error('No response received:', err.request);
         }
 
         toggle();
@@ -104,7 +83,7 @@ const ContactComponent : NextPage = () => {
         <div className={'row'}>
           <div className={'col-lg-5 col-md-12'}>
             <div className={'get_info'}>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h6>Get in Touch</h6>
                 <h2>Talk or Meet with Me</h2>
               </div>
@@ -112,7 +91,7 @@ const ContactComponent : NextPage = () => {
                 <i className={'flaticon-phone'} />
                 <div className={'media-body'}>
                   <h6>Call Me Now</h6>
-                  <a href="https://fernandomnatosaraujo.com/#" aria-label="">
+                  <a href="tel:+17788141987" aria-label="Call Fernando at 1-778-814-1987">
                     1-778-814-1987
                   </a>
                 </div>
@@ -121,7 +100,7 @@ const ContactComponent : NextPage = () => {
                 <i className={'flaticon-chat'} />
                 <div className={'media-body'}>
                   <h6>Contact Me</h6>
-                  <a href="https://fernandomnatosaraujo.com/#" aria-label="">
+                  <a href="mailto:contact@fernandomatosaraujo.com" aria-label="Email Fernando at contact@fernandomatosaraujo.com">
                     contact@fernandomatosaraujo.com
                   </a>
                 </div>
@@ -137,7 +116,7 @@ const ContactComponent : NextPage = () => {
           </div>
           <div className={'col-lg-7 col-md-12'}>
             <div className={'input_form'}>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h6>Contact me</h6>
                 <h2>Let me know here</h2>
               </div>

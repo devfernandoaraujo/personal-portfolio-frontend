@@ -9,7 +9,7 @@ const ServicesComponent : NextPage = () => {
         <div className={'row align-items-center flex-row-reverse'}>
           <div className={'col-lg-5'}>
             <div className={'service_content'}>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h6>What I do ?</h6>
                 <h2>Innovative solutions to grow your business</h2>
               </div>

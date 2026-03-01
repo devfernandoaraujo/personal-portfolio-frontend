@@ -11,7 +11,7 @@ const PortfolioComponent: NextPage = () => {
         <div className={'row'}>
           <div className={'col-lg-12'}>
             <div className={'portfolio_slider_info mb_60'}>
-              <div className={'section_title_two undefined'}>
+              <div className={'section_title_two'}>
                 <h6 className={'react-reveal fadeInUp mb_0 title_p ' + styles.description}>What I have been doing</h6>
                 <h2 className={'react-reveal fadeInUp mb_0 title_h2 t_color ' + styles.title}>Portfolio</h2>
               </div>
@@ -22,18 +22,18 @@ const PortfolioComponent: NextPage = () => {
                       <Image className="img-fluid" src="/images/dor-app.webp" alt="dor-app.webp" width="148" height="210" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
-                      <Link href="/#" aria-label="">
+                      <Link href="/#">
                         <h2>Dor Mobile App</h2>
                       </Link>
                       <p>
                         Welcome to the VIP communication channel between you and an exclusive call center, available 24 hours a day to offer differentiated
-                        access to the services of the Rede D’Or São Luiz. Everything always in the palm of your hand, through a simple app, but full of
+                        access to the services of the Rede D&apos;Or São Luiz. Everything always in the palm of your hand, through a simple app, but full of
                         advantages.
                       </p>
                       <a
                         href={'https://play.google.com/store/apps/details?id=com.cognizant.dor'}
                         rel="noopener noreferrer"
-                        aria-label=""
+                        aria-label="See more about Dor Mobile App"
                         className="read_btn"
                         target={'_blank'}
                       >
@@ -48,7 +48,7 @@ const PortfolioComponent: NextPage = () => {
                       <Image className="img-fluid" src="/images/agiliza.webp" alt="agiliza.webp" width="295" height="210" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
-                      <Link href="/#" aria-label="">
+                      <Link href="/#">
                         <h2>Agiliza</h2>
                       </Link>
                       <p>
@@ -56,7 +56,7 @@ const PortfolioComponent: NextPage = () => {
                         bank&apos;s Business Analysts to have all data they need to analyze clients and prospect clients based on a series of parameters such as
                         credit score and the relationship between the client and the bank.
                       </p>
-                      <a href="#portfolio" className="read_btn" aria-label="">
+                      <a href="#portfolio" className="read_btn" aria-label="See more about Agiliza">
                         See more<i className="arrow_right"></i>
                       </a>
                     </div>
@@ -68,16 +68,16 @@ const PortfolioComponent: NextPage = () => {
                        <Image className="img-fluid" src="/images/election-Estimator.webp" alt="election-Estimator.webp" width="295" height="210" />
                     </div>
                     <div className={'portfolio_content flex-grow-1'}>
-                      <a href={'https://elections-estimator.onefeather.ca/'} target={'_blank'} aria-label="" rel="noopener noreferrer">
+                      <a href={'https://elections-estimator.onefeather.ca/'} target={'_blank'} rel="noopener noreferrer">
                         <h2>Elections Estimator</h2>
                       </a>
                       <p>
-                        Smart automation to support First Nations' traditions and governance with a strategy and timeline tool for elections management; 
+                        Smart automation to support First Nations&apos; traditions and governance with a strategy and timeline tool for elections management;
                         creating a quicker and easier way to accommodate community needs.
                       </p>
                       <a
-                        href={"https://news.onefeather.ca/onefeather-launches-new-ai-tool-for-first-nations'-elections"}
-                        aria-label=""
+                        href={'https://news.onefeather.ca/onefeather-launches-new-ai-tool-for-first-nations-elections'}
+                        aria-label="See more about Elections Estimator"
                         rel="noopener noreferrer"
                         className="read_btn"
                         target={'_blank'}
