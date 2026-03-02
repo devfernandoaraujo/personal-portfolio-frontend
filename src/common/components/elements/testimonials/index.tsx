@@ -1,16 +1,17 @@
-import { NextPage } from 'next'
+import { NextPage } from 'next';
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
+import styles from '@/styles/Testimonials.module.scss';
 
-const TestimonialsComponent : NextPage = () => {
-  const testimonialList =[
+const TestimonialsComponent: NextPage = () => {
+  const testimonialList = [
     {
       imageSrc: '/images/linkedin_profile/murilo_profile.jfif',
       title: 'Scrum Master / Project Leader',
       name: 'Murilo Faria',
       message:
-        'I had the opportunity to work as technical leader of a project that Fernando recently participated in, I can say that Fernando is a very competent developer, who acts with responsibility and commitment in the activities that are assigned to him. Besides the technical skills Fernando is a reliable, punctual and sincere person. I wish you much success in this new phase of your career.',
+        'I had the opportunity to work as technical leader of a project that Fernando recently participated in. Fernando is a very competent developer, who acts with responsibility and commitment in the activities that are assigned to him. Besides the technical skills Fernando is a reliable, punctual and sincere person.',
       relationship: 'Worked with Fernando on the same team',
     },
     {
@@ -18,7 +19,7 @@ const TestimonialsComponent : NextPage = () => {
       title: 'IT Coordinator',
       name: 'Renato Moraes',
       message:
-        'Fernando is a very dedicated and very capable professional in everything he does. He has a very analytical focus to solve problems always seeking to solve them in his root',
+        'Fernando is a very dedicated and very capable professional in everything he does. He has a very analytical focus to solve problems always seeking to solve them at their root.',
       relationship: 'Worked with Fernando on the same team',
     },
     {
@@ -26,14 +27,14 @@ const TestimonialsComponent : NextPage = () => {
       title: 'Development Coordinator',
       name: 'Rafael Gil Silva',
       message:
-        'Fernando is a very smart, prestative and fast developer. Clean, well documented and easy to understand even in Auth/Sockets Technologies. I am realy glad that i had the oportunity to work with him in in the app project.',
-      relationship: 'Rafael was Fernando’s client',
+        'Fernando is a very smart, prestative and fast developer. Clean, well documented and easy to understand even in Auth/Sockets Technologies. I am really glad that I had the opportunity to work with him in the app project.',
+      relationship: 'Rafael was Fernando\'s client',
     },
     {
       imageSrc: '/images/linkedin_profile/victor_profile.jfif',
       title: 'IT Engineering Coordinator',
       name: 'Victor Thomazi Lucas',
-      message: 'Fernando have a impressive technical knowledge, aways ready to help everyone! great team mate!',
+      message: 'Fernando has impressive technical knowledge, always ready to help everyone! Great team mate!',
       relationship: 'Worked with Fernando on the same team',
     },
     {
@@ -49,57 +50,57 @@ const TestimonialsComponent : NextPage = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplaySpeed: 5000,
     autoplay: true,
     pauseOnDotsHover: true,
     pauseOnFocus: true,
     pauseOnHover: true,
-    rtl: true,
-    arrows: false,
-    appendDots: (dots: any) => <ul> {dots} </ul>,
-    customPaging: (i: number) => <button>{i + 1}</button>,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
-    <section className={'testimonial_area_two bg_color '} id="testimonial">
+    <section className={'testimonial_area_two bg_color'} id="testimonial">
       <div className={'container'}>
-        <div className={'row'}>
-          <div className={'col-lg-6'}>
-            <div className={'testimonial_img'}>
-              <Image src="/images/testimonial.bc1380d8.svg" alt="bc1380d8.svg" width="456" height="358" />
-            </div>
-          </div>
-          <div className={'col-lg-6'}>
-            <div className={'testimonial_slider_info'}>
-              <div className={'section_title_two'}>
-                <h6>Partners feedback</h6>
-                <h2>What his partners say about Fernando..</h2>
-              </div>
-              <div>
-                <Slider {...settings}>
-                  {testimonialList.map((testimonial, index) => (
-                    <div key={index}>
-                      <p>{testimonial.message}</p>
-                      <div className={'media'}>
-                        <div className={'author_img'}>
-                          <Image src={testimonial.imageSrc} alt="author_img" width="56" height="56" />
-                        </div>
-                        <div className={'media-body'}>
-                          <h6>{testimonial.name}</h6>
-                          <div className={'media-body-title'}>
-                            <span>{testimonial.title}</span>
-                            <span>{testimonial.relationship}</span>
-                          </div>
-                        </div>
-                      </div>
+        <div className={`section_title_two text-center ${styles.sectionHeader}`}>
+          <h6>Partners feedback</h6>
+          <h2>What his partners say about Fernando</h2>
+        </div>
+        <div className={styles.sliderWrapper}>
+          <Slider {...settings}>
+            {testimonialList.map((testimonial, index) => (
+              <div key={index}>
+                <div className={styles.card}>
+                  <p className={styles.message}>{testimonial.message}</p>
+                  <div className={styles.author}>
+                    <div className={styles.authorImg}>
+                      <Image
+                        src={testimonial.imageSrc}
+                        alt={testimonial.name}
+                        width={56}
+                        height={56}
+                      />
                     </div>
-                  ))}
-                </Slider>
+                    <div className={styles.authorInfo}>
+                      <h6>{testimonial.name}</h6>
+                      <span className={styles.authorTitle}>{testimonial.title}</span>
+                      <span className={styles.relationship}>{testimonial.relationship}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </section>
