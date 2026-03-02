@@ -7,7 +7,7 @@ import styles from '@/styles/Testimonials.module.scss';
 const TestimonialsComponent: NextPage = () => {
   const testimonialList = [
     {
-      imageSrc: '/images/linkedin_profile/murilo_profile.jfif',
+      imageSrc: '/images/linkedin_profile/murilo_profile.jpg',
       title: 'Scrum Master / Project Leader',
       name: 'Murilo Faria',
       message:
@@ -15,7 +15,7 @@ const TestimonialsComponent: NextPage = () => {
       relationship: 'Worked with Fernando on the same team',
     },
     {
-      imageSrc: '/images/linkedin_profile/renato_profile.jfif',
+      imageSrc: '/images/linkedin_profile/renato_profile.jpg',
       title: 'IT Coordinator',
       name: 'Renato Moraes',
       message:
@@ -23,7 +23,7 @@ const TestimonialsComponent: NextPage = () => {
       relationship: 'Worked with Fernando on the same team',
     },
     {
-      imageSrc: '/images/linkedin_profile/rafael_gil_profile.jfif',
+      imageSrc: '/images/linkedin_profile/rafael_gil_profile.jpg',
       title: 'Development Coordinator',
       name: 'Rafael Gil Silva',
       message:
@@ -31,14 +31,14 @@ const TestimonialsComponent: NextPage = () => {
       relationship: 'Rafael was Fernando\'s client',
     },
     {
-      imageSrc: '/images/linkedin_profile/victor_profile.jfif',
+      imageSrc: '/images/linkedin_profile/victor_profile.jpg',
       title: 'IT Engineering Coordinator',
       name: 'Victor Thomazi Lucas',
       message: 'Fernando has impressive technical knowledge, always ready to help everyone! Great team mate!',
       relationship: 'Worked with Fernando on the same team',
     },
     {
-      imageSrc: '/images/linkedin_profile/lesley_profile.jfif',
+      imageSrc: '/images/linkedin_profile/lesley_profile.jpg',
       title: 'Web Engineer',
       name: 'Lesley Fernandes Moreira',
       message: 'Good professional, dedicated, uses his best for the company.',
