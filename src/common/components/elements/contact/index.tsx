@@ -77,7 +77,7 @@ const ContactComponent : NextPage = () => {
   };
 
   return (
-    <section className={'contact-area contact-area-two'} id="contacts">
+    <section className={'contact-area contact-area-two bg_color'} id="contacts">
       {visible && <Message {...alertProps} />}
       <div className={'container'}>
         <div className={'row'}>

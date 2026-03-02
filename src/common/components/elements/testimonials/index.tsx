@@ -70,7 +70,7 @@ const TestimonialsComponent: NextPage = () => {
   };
 
   return (
-    <section className={'testimonial_area_two bg_color'} id="testimonial">
+    <section className={'testimonial_area_two'} id="testimonial">
       <div className={'container'}>
         <div className={`section_title_two text-center ${styles.sectionHeader}`}>
           <h6>Partners feedback</h6>
