@@ -6,6 +6,7 @@ import Skills from '@/common/components/elements/skills';
 import Testimonials from '@/common/components/elements/testimonials';
 import Contact from '@/common/components/elements/contact';
 import Footer from '@/common/components/elements/footer';
+import ScrollToTop from '@/common/components/elements/scroll-to-top';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
