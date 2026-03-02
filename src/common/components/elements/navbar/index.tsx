@@ -89,11 +89,6 @@ const NavbarComponent = () => {
                   </a>
                 </li>
                 <li className={'nav-item'}>
-                  <a href="#service" onClick={menuHide} className={activeSection === 'service' ? 'nav-link  active' : 'nav-link'}>
-                    Services
-                  </a>
-                </li>
-                <li className={'nav-item'}>
                   <a href="#about" onClick={menuHide} className={activeSection === 'about' ? 'nav-link  active' : 'nav-link'}>
                     About
                   </a>
@@ -109,8 +104,13 @@ const NavbarComponent = () => {
                   </a>
                 </li>
                 <li className={'nav-item'}>
+                  <a href="#service" onClick={menuHide} className={activeSection === 'service' ? 'nav-link  active' : 'nav-link'}>
+                    Services
+                  </a>
+                </li>
+                <li className={'nav-item'}>
                   <a href="#testimonial" onClick={menuHide} className={activeSection === 'testimonial' ? 'nav-link  active' : 'nav-link'}>
-                    Testimonial
+                    Testimonials
                   </a>
                 </li>
                 <li className={'nav-item'}>

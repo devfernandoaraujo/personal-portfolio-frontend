@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <div className="body_wrapper">
       <Nav />
-      <Services />
       <About />
       <Portfolio />
       <Skills />
+      <Services />
       <Testimonials />
       <Contact />
       <Footer />
