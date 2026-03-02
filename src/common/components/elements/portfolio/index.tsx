@@ -88,7 +88,7 @@ const PortfolioComponent: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className={'text-center mt-5'}>
+              <div className={styles.cta}>
                 <a href="#contacts" className={'theme_btn active'}>
                   Let&apos;s work together <i className={'arrow_right'}></i>
                 </a>

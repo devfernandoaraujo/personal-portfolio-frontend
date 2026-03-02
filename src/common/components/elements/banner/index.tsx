@@ -44,7 +44,7 @@ const BannerComponent : NextPage = () => {
                 <span itemProp="description">I help companies with their digital brand</span>
               </h4>
               <a href="#contacts" className={'react-reveal fadeInDown theme_btn active ' + styles.contactMe}  itemProp="seeks">
-                Hire me
+                Get in touch
               </a>
             </div>
           </div>

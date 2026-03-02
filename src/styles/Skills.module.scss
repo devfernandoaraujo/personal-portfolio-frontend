@@ -62,3 +62,28 @@
   text-align: center;
   line-height: 1.3;
 }
+
+.cta {
+  text-align: center;
+  margin-top: 3rem;
+
+  :global(.theme_btn.active) {
+    background: #0db3c7;
+    border-color: #0db3c7;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background: #0aa3b8;
+      border-color: #0aa3b8;
+      box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.12);
+      color: #fff;
+    }
+  }
+}
