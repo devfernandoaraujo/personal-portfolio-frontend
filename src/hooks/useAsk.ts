@@ -2,7 +2,9 @@
 
 import { useCallback, useRef, useState } from 'react';
 
-type Turn = { role: 'user' | 'model'; content: string };
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL ?? '';
+
+type Turn = { role: 'user' | 'model'; parts: { text: string }[] };
 
 export function useAsk() {
   const [answer, setAnswer] = useState('');
@@ -26,7 +28,7 @@ export function useAsk() {
     let accumulated = '';
 
     try {
-      const resp = await fetch('/api/ask', {
+      const resp = await fetch(`${BACKEND_URL}/ask`, {
         method: 'POST',
         signal: ctrl.signal,
         headers: { 'Content-Type': 'application/json' },
@@ -51,26 +53,28 @@ export function useAsk() {
         buffer = parts.pop() ?? '';
 
         for (const part of parts) {
-          const lines = part.split('\n');
-          const eventLine = lines.find((l) => l.startsWith('event: '));
-          const dataLine = lines.find((l) => l.startsWith('data: '));
-          if (!eventLine || !dataLine) continue;
-          const event = eventLine.slice(7).trim();
-          const data = dataLine.slice(6).replace(/\\n/g, '\n');
-
-          if (event === 'token') {
-            accumulated += data;
+          if (!part.startsWith('data: ')) continue;
+          const raw = part.slice(6).trim();
+          if (raw === '[DONE]') break;
+          let parsed: { text?: string; error?: string };
+          try {
+            parsed = JSON.parse(raw);
+          } catch {
+            continue;
+          }
+          if (typeof parsed.text === 'string') {
+            accumulated += parsed.text;
             setAnswer(accumulated);
-          } else if (event === 'error') {
-            throw new Error(data);
+          } else if (typeof parsed.error === 'string') {
+            throw new Error(parsed.error);
           }
         }
       }
 
       historyRef.current = [
         ...historyRef.current,
-        { role: 'user' as const, content: q },
-        { role: 'model' as const, content: accumulated },
+        { role: 'user' as const, parts: [{ text: q }] },
+        { role: 'model' as const, parts: [{ text: accumulated }] },
       ].slice(-8);
     } catch (err) {
       if ((err as { name?: string }).name === 'AbortError') return;

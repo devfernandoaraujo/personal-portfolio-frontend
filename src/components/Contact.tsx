@@ -49,13 +49,15 @@ export default function Contact() {
     setErrorMsg('');
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/contacts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: data.name, email: data.email, message: data.message }),
+        body: JSON.stringify({ name: data.name, email: data.email, message: data.message, _hp: data._hp }),
       });
-      const json = await res.json();
-      if (!json.ok) throw new Error(json.error || 'Something went wrong');
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({ message: 'Something went wrong' }));
+        throw new Error(json.message || 'Something went wrong');
+      }
       setFormState('success');
       form.reset();
     } catch (err) {
@@ -129,7 +131,7 @@ export default function Contact() {
               </label>
               {/* honeypot */}
               <input
-                name="website"
+                name="_hp"
                 type="text"
                 tabIndex={-1}
                 autoComplete="off"
